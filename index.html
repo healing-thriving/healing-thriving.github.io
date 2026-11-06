@@ -1113,10 +1113,10 @@
                 </div>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wider text-navy/60">Call or Text</p>
-                  <a href="tel:505-920-9421" class="text-lg font-bold text-navy hover:text-tealBrand">505-920-9421</a>
+                  <a href="tel:5055004485" class="text-lg font-bold text-navy hover:text-tealBrand">(505) 500-4485</a>
                 </div>
               </div>
-              <button onclick="copyText('505-920-9421', 'Phone number copied!')" class="px-3 py-1.5 rounded-lg bg-white border border-navy/15 text-xs font-bold text-navy hover:bg-skySoft">
+              <button onclick="copyText('(505) 500-4485', 'Phone number copied!')" class="px-3 py-1.5 rounded-lg bg-white border border-navy/15 text-xs font-bold text-navy hover:bg-skySoft">
                 Copy
               </button>
             </div>
@@ -1415,7 +1415,7 @@
 
     // Referral Message
     function shareReferralMessage() {
-      const msg = "Hi! I wanted to recommend my Physical Therapist, Hanju Tsai at Healing & Thriving in Los Alamos (4220B Trinity Dr • 505-920-9421 • healingthriving.pt@gmail.com). Let Hanju know I referred you when scheduling!";
+      const msg = "Hi! I wanted to recommend my Physical Therapist, Hanju Tsai at Healing & Thriving in Los Alamos (4220B Trinity Dr • (505) 500-4485 • healingthriving.pt@gmail.com). Let Hanju know I referred you when scheduling!";
       copyText(msg, 'Referral message copied! Ready to text or email.');
     }
 
@@ -1428,7 +1428,7 @@
         'FN:Hanju Tsai - Healing & Thriving PT',
         'ORG:Healing & Thriving Physical Therapy',
         'TITLE:Physical Therapist',
-        'TEL;TYPE=CELL,VOICE:505-920-9421',
+        'TEL;TYPE=CELL,VOICE:(505) 500-4485',
         'EMAIL;TYPE=INTERNET:healingthriving.pt@gmail.com',
         'ADR;TYPE=WORK:;;4220B Trinity Dr;Los Alamos;NM;87544;USA',
         'NOTE:Quality Care • Personalized Support • Better Outcomes. Full 60-minute PT sessions in Los Alamos & White Rock.',
@@ -1485,8 +1485,8 @@
 
     function sendViaSMS() {
       const { body } = buildInquiryBody();
-      window.location.href = `sms:5059209421?body=${encodeURIComponent(body)}`;
-      showToast('Opening text messaging to 505-920-9421...');
+      window.location.href = `sms:5055004485?body=${encodeURIComponent(body)}`;
+      showToast('Opening text messaging to (505) 500-4485...');
     }
   </script>
 </body>
