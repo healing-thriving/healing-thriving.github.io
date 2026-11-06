@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Healing & Thriving | Physical Therapy by Hanju Tsai in Los Alamos, NM</title>
-  <meta name="description" content="Healing & Thriving Physical Therapy in Los Alamos & White Rock, NM. Quality Care, Personalized Support, Better Outcomes with Physical Therapist Hanju Tsai. Full 60-minute sessions." />
+  <meta name="description" content="Healing & Thriving Physical Therapy in Los Alamos & White Rock, NM. Quality Care, Personalized Support, and Better Outcomes with Physical Therapist Hanju Tsai. Full 60-minute one-on-one sessions." />
 
-  <!-- Favicon Configuration with multi-filename fallback for GitHub Pages -->
+  <!-- Favicon Configuration with multi-filename fallback -->
   <link id="site-favicon" rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="logo.png" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts matching the flyers & business card -->
+  <!-- Google Fonts matching the flyers & branding -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
             navyLight: '#1E527D',
             tealBrand: '#1D7865',
             tealSoft: '#E2F3EC',
-            coralBrand: '#F07870',
+            coralBrand: '#E26D65',
             coralSoft: '#FCE8E6',
             goldAccent: '#F3B33D',
             lavenderSoft: '#ECECF9',
@@ -59,7 +59,7 @@
       overflow-x: hidden;
     }
 
-    /* Subtle paper grain & watercolor feel */
+    /* Soft watercolor ambient background */
     .paper-bg {
       background-color: #FAF8F3;
       background-image: 
@@ -69,7 +69,7 @@
         radial-gradient(at 15% 90%, rgba(226, 243, 236, 0.45) 0px, transparent 50%);
     }
 
-    /* Perforated ticket effect for Referral Cards */
+    /* Perforated ticket visual style */
     .ticket-card {
       position: relative;
       border-radius: 18px;
@@ -79,21 +79,17 @@
       content: '';
       position: absolute;
       top: 50%;
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       background-color: #FAF8F3;
       border-radius: 9999px;
       transform: translateY(-50%);
       z-index: 10;
     }
-    .ticket-card::before {
-      left: -14px;
-    }
-    .ticket-card::after {
-      right: -14px;
-    }
+    .ticket-card::before { left: -13px; }
+    .ticket-card::after { right: -13px; }
 
-    /* Custom Range Slider */
+    /* Custom range slider */
     input[type=range] {
       -webkit-appearance: none;
       appearance: none;
@@ -121,14 +117,7 @@
       transform: scale(1.12);
     }
 
-    /* Smooth SVG path animation */
-    .recovery-path {
-      stroke-dasharray: 1200;
-      stroke-dashoffset: 0;
-      transition: stroke-dashoffset 1s ease-out;
-    }
-
-    /* Business card texture */
+    /* Textured card */
     .biz-card-texture {
       background: linear-gradient(135deg, #C3DAF2 0%, #B3CDE8 50%, #A9C5E2 100%);
       box-shadow: 0 20px 40px -15px rgba(18, 58, 90, 0.22), inset 0 1px 0 rgba(255,255,255,0.6);
@@ -140,29 +129,29 @@
   <!-- Toast Notification Container (No alert() used) -->
   <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
-  <!-- Decorative Top Botanical Corner SVGs -->
-  <div class="fixed top-0 left-0 w-40 h-40 pointer-events-none opacity-40 -z-10">
+  <!-- Ambient Botanical Background SVGs -->
+  <div class="fixed top-0 left-0 w-44 h-44 pointer-events-none opacity-40 -z-10">
     <svg viewBox="0 0 200 200" fill="none">
       <path d="M0 0H180C150 60 110 90 60 130C25 158 10 180 0 200V0Z" fill="#D6E8F5"/>
     </svg>
   </div>
-  <div class="fixed top-0 right-0 w-44 h-44 pointer-events-none opacity-40 -z-10">
+  <div class="fixed top-0 right-0 w-48 h-48 pointer-events-none opacity-40 -z-10">
     <svg viewBox="0 0 200 200" fill="none">
       <path d="M200 0H20C50 60 90 90 140 130C175 158 190 180 200 200V0Z" fill="#DCE6DF"/>
     </svg>
   </div>
 
-  <!-- ================= STICKY HEADER / NAVBAR ================= -->
+  <!-- ================= STICKY HEADER ================= -->
   <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-navy/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo (Figurine with Bluebirds + Title) -->
+      
+      <!-- Brand Logo Emblem & Name -->
       <a href="#top" class="flex items-center gap-3.5 group focus:outline-none">
-        <!-- Figurine Logo Emblem Container -->
         <div class="w-12 h-12 rounded-full bg-skyCard/70 border-2 border-navy/20 shadow-sm flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shrink-0">
           <img src="logo.png" 
                alt="Healing & Thriving Logo" 
                class="w-full h-full object-contain p-0.5"
-               onerror="this.onerror=null; this.src='Screenshot 2026-10-12 183738 LOGO.png'; this.classList.remove('hidden');" />
+               onerror="this.onerror=null; this.src='Screenshot 2026-10-12 183738 LOGO.png';" />
         </div>
         <div>
           <span class="block font-serif text-2xl sm:text-3xl font-bold text-navy tracking-tight leading-none">
@@ -174,19 +163,19 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-navy/80">
         <a href="#about" class="hover:text-tealBrand transition-colors">About</a>
-        <a href="#recovery-guides" class="hover:text-tealBrand transition-colors">Understanding Recovery</a>
-        <a href="#pricing" class="hover:text-tealBrand transition-colors">Pricing &amp; Packages</a>
-        <a href="#referral" class="hover:text-tealBrand transition-colors">Referral Gift</a>
+        <a href="#recovery-guides" class="hover:text-tealBrand transition-colors">Recovery Guides</a>
+        <a href="#services" class="hover:text-tealBrand transition-colors">Services &amp; Care Model</a>
+        <a href="#referral" class="hover:text-tealBrand transition-colors">Referral Appreciation</a>
         <a href="#contact" class="px-5 py-2.5 rounded-full bg-navy text-cream hover:bg-tealBrand transition-all shadow-sm">
           Contact &amp; Book
         </a>
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl bg-skySoft text-navy hover:bg-skyCard transition-colors">
+      <button id="mobile-menu-btn" aria-label="Toggle Navigation" class="md:hidden p-2.5 rounded-xl bg-skySoft text-navy hover:bg-skyCard transition-colors">
         <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -196,14 +185,13 @@
       </button>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer -->
     <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-navy/10 px-4 pt-2 pb-5 space-y-2">
       <a href="#about" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">About Hanju Tsai</a>
-      <a href="#recovery-guides" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">Understanding Recovery Guides</a>
-      <a href="#pricing" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">Pricing &amp; Packages</a>
-      <a href="#estimator" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">Session Cost Calculator</a>
-      <a href="#referral" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">Refer a Friend ($10 Off)</a>
-      <a href="#contact" class="mobile-link block text-center mt-2 px-4 py-3 rounded-xl font-bold bg-navy text-white">Contact &amp; Book Session</a>
+      <a href="#recovery-guides" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">Recovery Guides</a>
+      <a href="#services" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">Services &amp; Care Model</a>
+      <a href="#referral" class="mobile-link block px-4 py-2.5 rounded-xl font-semibold text-navy hover:bg-skySoft">Referral Appreciation</a>
+      <a href="#contact" class="mobile-link block text-center mt-2 px-4 py-3 rounded-xl font-bold bg-navy text-white">Contact &amp; Book</a>
     </div>
   </header>
 
@@ -212,11 +200,11 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         
-        <!-- Left Column: Hero Messaging -->
+        <!-- Left Hero Content -->
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-skySoft border border-skyCard text-navy text-xs sm:text-sm font-bold tracking-wide">
             <span class="w-2.5 h-2.5 rounded-full bg-tealBrand animate-pulse"></span>
-            Los Alamos &amp; White Rock, NM • Clinic &amp; Home Visits
+            Los Alamos &amp; White Rock, NM • In-Clinic &amp; In-Home Mobile Care
           </div>
 
           <div class="space-y-2">
@@ -229,26 +217,26 @@
           </div>
 
           <p class="text-base sm:text-lg text-navy/80 leading-relaxed max-w-2xl">
-            Welcome to <strong>Healing &amp; Thriving</strong>. With dedicated, unhurried <strong>full 60-minute one-on-one sessions</strong>, Physical Therapist <strong>Hanju Tsai</strong> partners with you to rebuild strength, restore mobility, and guide you through every stage of recovery with clarity and compassion.
+            Welcome to <strong>Healing &amp; Thriving</strong>. With dedicated, unhurried <strong>full 60-minute one-on-one sessions</strong>, Physical Therapist <strong>Hanju Tsai</strong> partners with you to rebuild strength, restore functional movement, and navigate each phase of recovery with confidence and compassion.
           </p>
 
-          <!-- Primary CTAs -->
+          <!-- CTAs -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
             <a href="#contact" class="inline-flex items-center gap-2.5 px-7 py-4 rounded-2xl bg-navy text-white font-bold text-base shadow-lg hover:bg-tealBrand transition-all transform hover:-translate-y-0.5">
               <svg class="w-5 h-5 text-goldAccent" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
               </svg>
-              Get in Touch &amp; Book
+              Schedule an Appointment
             </a>
-            <a href="#pricing" class="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-white border-2 border-navy/15 text-navy font-bold text-base hover:border-navy/40 hover:bg-skySoft/50 transition-all">
-              View Pricing &amp; Packages
+            <a href="#services" class="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-white border-2 border-navy/15 text-navy font-bold text-base hover:border-navy/40 hover:bg-skySoft/50 transition-all">
+              Explore Our Care Model
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
               </svg>
             </a>
           </div>
 
-          <!-- Feature Highlights (Replaces repeated phone/email/address row) -->
+          <!-- Feature Highlights -->
           <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
             <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white/80 border border-navy/10 shadow-sm">
               <div class="w-8 h-8 rounded-lg bg-skySoft text-navy flex items-center justify-center shrink-0">
@@ -274,24 +262,21 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                 </svg>
               </div>
-              <span class="font-bold text-navy text-xs sm:text-sm">Clinic &amp; Home Visits</span>
+              <span class="font-bold text-navy text-xs sm:text-sm">Clinic &amp; In-Home Visits</span>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Business Art & Core Philosophy Card (Cleaned of raw phone/email duplication) -->
+        <!-- Right Art Card -->
         <div class="lg:col-span-5">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            <!-- Decorative sun rays matching flyer headers -->
             <svg class="absolute -top-6 -right-4 w-16 h-16 text-goldAccent hidden sm:block pointer-events-none" viewBox="0 0 80 80" fill="none">
               <path d="M15 45L45 15M25 60L65 40M40 70L72 65" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
             </svg>
 
-            <!-- Card Showcase with Art & Philosophy -->
             <div class="bg-white p-3 sm:p-4 rounded-2xl shadow-soft border border-navy/10">
               <div class="biz-card-texture rounded-xl p-6 sm:p-7 relative overflow-hidden border border-white/50">
                 <div class="grid grid-cols-12 items-center gap-4">
-                  <!-- Figurine Logo Emblem Showcase -->
                   <div class="col-span-4 flex justify-center">
                     <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white/70 border-2 border-navy/15 p-1.5 shadow-sm flex items-center justify-center overflow-hidden backdrop-blur-sm">
                       <img src="logo.png" 
@@ -301,7 +286,6 @@
                     </div>
                   </div>
 
-                  <!-- Clinic & Practitioner Identity -->
                   <div class="col-span-8 space-y-1.5 text-[#1A1D21]">
                     <div>
                       <h2 class="font-serif italic font-bold text-2xl sm:text-3xl tracking-wide text-[#181C22]">
@@ -322,31 +306,30 @@
                 </div>
               </div>
 
-              <!-- Card Footer Navigation Prompt -->
               <div class="mt-3 pt-2 flex items-center justify-between text-xs font-semibold text-navy/80 px-1">
                 <span class="flex items-center gap-1.5 text-tealBrand">
                   <span class="w-2 h-2 rounded-full bg-tealBrand"></span>
                   Patient-Centered Therapy
                 </span>
                 <a href="#contact" class="text-navy hover:text-tealBrand inline-flex items-center gap-1 underline underline-offset-2">
-                  View Full Contact Info &rarr;
+                  Contact Information &rarr;
                 </a>
               </div>
             </div>
 
-            <!-- Small Feature Pills under Card -->
+            <!-- Pillars Pill under Card -->
             <div class="mt-4 grid grid-cols-3 gap-2.5 text-center">
               <div class="bg-white/90 p-3 rounded-xl border border-navy/10 shadow-sm">
-                <p class="font-serif font-bold text-2xl text-navy">60 min</p>
-                <p class="text-xs text-navy/70 font-medium">1-on-1 Care</p>
+                <p class="font-serif font-bold text-xl sm:text-2xl text-navy">60 min</p>
+                <p class="text-xs text-navy/70 font-medium">Undivided Time</p>
               </div>
               <div class="bg-white/90 p-3 rounded-xl border border-navy/10 shadow-sm">
-                <p class="font-serif font-bold text-2xl text-tealBrand">Clinic &amp; Home</p>
-                <p class="text-xs text-navy/70 font-medium">Flexible Visits</p>
+                <p class="font-serif font-bold text-xl sm:text-2xl text-tealBrand">Clinic &amp; Home</p>
+                <p class="text-xs text-navy/70 font-medium">Flexible Care</p>
               </div>
               <div class="bg-white/90 p-3 rounded-xl border border-navy/10 shadow-sm">
-                <p class="font-serif font-bold text-2xl text-coralBrand">$60–$80</p>
-                <p class="text-xs text-navy/70 font-medium">Per Session</p>
+                <p class="font-serif font-bold text-xl sm:text-2xl text-coralBrand">Long-Term</p>
+                <p class="text-xs text-navy/70 font-medium">Lasting Health</p>
               </div>
             </div>
           </div>
@@ -356,7 +339,7 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT HANJU TSAI & APPROACH SECTION ================= -->
+  <!-- ================= ABOUT HANJU TSAI & CLINICAL APPROACH ================= -->
   <section id="about" class="py-14 bg-white/75 border-y border-navy/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
@@ -364,15 +347,15 @@
           Personalized Physical Therapy
         </span>
         <h2 class="font-serif text-3xl sm:text-5xl font-bold text-navy">
-          Why Patients Choose Healing &amp; Thriving
+          Why Choose Healing &amp; Thriving
         </h2>
         <p class="text-navy/75 text-base sm:text-lg">
-          Whether you are recovering from an injury, managing persistent pain, or working toward better mobility and resilience, every session is tailored around your goals.
+          Whether you are recovering from an acute injury, addressing persistent pain, or striving for greater functional mobility, care is structured around what matters most to your life.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Pillar 1 -->
+        <!-- 1 -->
         <div class="bg-cream p-7 rounded-2xl border border-navy/10 shadow-card flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl bg-skySoft text-navy flex items-center justify-center">
@@ -382,15 +365,15 @@
             </div>
             <h3 class="font-serif text-2xl font-bold text-navy">Full 60-Minute Sessions</h3>
             <p class="text-navy/75 text-sm leading-relaxed">
-              No rushed appointments or being passed off between aides. You receive a full hour of undivided, hands-on attention and individualized guidance with Hanju Tsai.
+              No rushed visits or being passed off between multiple providers. You receive dedicated, one-on-one clinical evaluation, manual guidance, and active exercise coaching each visit.
             </p>
           </div>
           <p class="mt-6 pt-4 border-t border-navy/10 text-xs font-bold text-tealBrand uppercase tracking-wider">
-            Quality Care • Unhurried Time
+            Quality Care • Dedicated Attention
           </p>
         </div>
 
-        <!-- Pillar 2 -->
+        <!-- 2 -->
         <div class="bg-cream p-7 rounded-2xl border border-navy/10 shadow-card flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl bg-tealSoft text-tealBrand flex items-center justify-center">
@@ -398,17 +381,17 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
               </svg>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-navy">Science-Backed Education</h3>
+            <h3 class="font-serif text-2xl font-bold text-navy">Evidence-Based Education</h3>
             <p class="text-navy/75 text-sm leading-relaxed">
-              Understanding <em>how</em> pain and tissue adaptation work reduces fear and accelerates recovery. We empower you with clear, evidence-based tools so you feel confident moving forward.
+              Understanding the science of pain and tissue capacity diminishes fear and empowers progress. We provide clear, practical knowledge so you take charge of your healing journey.
             </p>
           </div>
           <p class="mt-6 pt-4 border-t border-navy/10 text-xs font-bold text-tealBrand uppercase tracking-wider">
-            Personalized Support • Clarity
+            Clarity • Collaborative Approach
           </p>
         </div>
 
-        <!-- Pillar 3 -->
+        <!-- 3 -->
         <div class="bg-cream p-7 rounded-2xl border border-navy/10 shadow-card flex flex-col justify-between">
           <div class="space-y-4">
             <div class="w-12 h-12 rounded-2xl bg-peachSoft text-amber-800 flex items-center justify-center">
@@ -416,13 +399,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
               </svg>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-navy">Clinic or In-Home Visits</h3>
+            <h3 class="font-serif text-2xl font-bold text-navy">In-Clinic or Mobile Visits</h3>
             <p class="text-navy/75 text-sm leading-relaxed">
-              Visit our welcoming Los Alamos studio at <strong>4220B Trinity Dr</strong>, or request convenient home visits in <strong>Los Alamos (+$10)</strong> and <strong>White Rock (+$20)</strong>.
+              Convenient treatment options available at our Los Alamos clinic studio (<strong>4220B Trinity Dr</strong>), or through mobile home visits throughout <strong>Los Alamos</strong> and <strong>White Rock</strong>.
             </p>
           </div>
           <p class="mt-6 pt-4 border-t border-navy/10 text-xs font-bold text-tealBrand uppercase tracking-wider">
-            Better Outcomes • Flexible Access
+            Accessibility • Community Centered
           </p>
         </div>
       </div>
@@ -442,11 +425,11 @@
           Understanding Pain &amp; Your Recovery Journey
         </h2>
         <p class="text-navy/75 text-base sm:text-lg">
-          Explore our three core rehabilitation guides below. Click through each interactive concept to see how your body adapts, protects, and builds lasting resilience.
+          Explore our three core rehabilitation guides below. Click through each concept to discover how your body adapts, protects, and restores resilience over time.
         </p>
       </div>
 
-      <!-- Interactive Guide Tabs Navigation -->
+      <!-- Guide Tabs -->
       <div class="flex flex-wrap justify-center gap-3 mb-8" role="tablist">
         <button onclick="switchGuideTab('pain')" id="tab-btn-pain" class="guide-tab-btn px-5 py-3.5 rounded-2xl font-bold text-sm sm:text-base transition-all bg-navy text-white shadow-md flex items-center gap-2.5">
           <span class="w-6 h-6 rounded-full bg-white/20 text-xs flex items-center justify-center">1</span>
@@ -462,7 +445,7 @@
         </button>
       </div>
 
-      <!-- ==================== GUIDE 1: PAIN DOES NOT ALWAYS MEAN DAMAGE ==================== -->
+      <!-- GUIDE 1: PAIN DOES NOT ALWAYS MEAN DAMAGE -->
       <div id="guide-panel-pain" class="guide-panel bg-white rounded-3xl p-6 sm:p-10 shadow-soft border border-navy/10">
         <div class="text-center max-w-3xl mx-auto mb-8">
           <h3 class="font-sans font-extrabold text-2xl sm:text-4xl tracking-tight text-navy uppercase">
@@ -475,10 +458,10 @@
           </div>
         </div>
 
-        <!-- 3-Stage Mountain Visual Grid (Matching "Pain and Recovery_ Three-Stage Guide.png") -->
+        <!-- 3-Stage Mountain Visual Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
           
-          <!-- STAGE 1: BEFORE INJURY -->
+          <!-- Stage 1 -->
           <div class="bg-cream rounded-2xl p-6 border border-navy/10 flex flex-col justify-between hover:border-tealBrand/50 transition-all">
             <div>
               <div class="text-center mb-4">
@@ -486,39 +469,31 @@
                   1. Before Injury
                 </span>
               </div>
-              <!-- Mountain SVG 1 -->
               <div class="relative h-52 w-full flex items-end justify-center">
                 <svg viewBox="0 0 300 190" class="w-full h-full overflow-visible">
-                  <!-- Watercolor Mountain Shape -->
                   <path d="M15 175 L95 55 L115 65 L155 20 L195 55 L215 48 L285 175 Z" fill="#D2E5E0" stroke="#A7C9C0" stroke-width="1.5"/>
                   <path d="M55 175 L120 75 L155 20 L195 85 L245 175 Z" fill="#E3F0EC" opacity="0.7"/>
                   
-                  <!-- Buffer Zone shading -->
                   <path d="M68 95 Q150 90 232 95 L248 125 Q150 122 52 125 Z" fill="#B9D3EE" opacity="0.45"/>
                   <text x="150" y="107" text-anchor="middle" fill="#123A5A" font-size="11" font-weight="700">Buffer</text>
                   <text x="150" y="119" text-anchor="middle" fill="#123A5A" font-size="11" font-weight="700">Zone</text>
 
-                  <!-- Tissue Tolerance Line (Blue - High) -->
                   <path d="M68 95 Q150 90 232 95" stroke="#0B65C6" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-                  <!-- Leader line & label -->
                   <line x1="88" y1="54" x2="103" y2="92" stroke="#0B65C6" stroke-width="1.5"/>
                   <text x="5" y="48" fill="#0B65C6" font-size="12" font-weight="700">Tissue Tolerance</text>
 
-                  <!-- Pain Protection Line (Green - Medium) -->
                   <path d="M52 125 Q150 122 248 125" stroke="#1E7E48" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-                  <!-- Leader line & label -->
                   <line x1="50" y1="84" x2="72" y2="124" stroke="#1E7E48" stroke-width="1.5"/>
                   <text x="5" y="78" fill="#1E7E48" font-size="12" font-weight="700">Pain Protection</text>
                 </svg>
               </div>
             </div>
-
             <p class="mt-4 text-center text-navy font-semibold text-base leading-relaxed">
               Your body can tolerate a certain amount of physical load. Pain may warn you before that limit is reached.
             </p>
           </div>
 
-          <!-- STAGE 2: AFTER INJURY -->
+          <!-- Stage 2 -->
           <div class="bg-cream rounded-2xl p-6 border border-navy/10 flex flex-col justify-between hover:border-tealBrand/50 transition-all">
             <div>
               <div class="text-center mb-4">
@@ -526,35 +501,29 @@
                   2. After Injury
                 </span>
               </div>
-              <!-- Mountain SVG 2 -->
               <div class="relative h-52 w-full flex items-end justify-center">
                 <svg viewBox="0 0 300 190" class="w-full h-full overflow-visible">
-                  <!-- Watercolor Mountain Shape -->
                   <path d="M15 175 L95 55 L115 65 L155 20 L195 55 L215 48 L285 175 Z" fill="#D2E5E0" stroke="#A7C9C0" stroke-width="1.5"/>
                   <path d="M55 175 L120 75 L155 20 L195 85 L245 175 Z" fill="#E3F0EC" opacity="0.7"/>
                   
-                  <!-- Narrowed/Lowered Buffer Zone -->
                   <path d="M55 118 Q150 116 245 118 L256 138 Q150 136 44 138 Z" fill="#F07870" opacity="0.22"/>
 
-                  <!-- Tissue Tolerance Line (Blue - Lowered after injury) -->
                   <path d="M55 118 Q150 116 245 118" stroke="#0B65C6" stroke-width="3.5" stroke-linecap="round" fill="none"/>
                   <line x1="92" y1="62" x2="112" y2="116" stroke="#0B65C6" stroke-width="1.5"/>
                   <text x="5" y="56" fill="#0B65C6" font-size="12" font-weight="700">Tissue Tolerance</text>
 
-                  <!-- Pain Protection Line (Green - Much lower / hyper-sensitive) -->
                   <path d="M44 138 Q150 136 256 138" stroke="#1E7E48" stroke-width="3.5" stroke-linecap="round" fill="none"/>
                   <line x1="65" y1="92" x2="82" y2="137" stroke="#1E7E48" stroke-width="1.5"/>
                   <text x="5" y="86" fill="#1E7E48" font-size="12" font-weight="700">Pain Protection</text>
                 </svg>
               </div>
             </div>
-
             <p class="mt-4 text-center text-navy font-semibold text-base leading-relaxed">
               After an injury, your body may tolerate less load, and its protective system may become more sensitive.
             </p>
           </div>
 
-          <!-- STAGE 3: DURING REHABILITATION -->
+          <!-- Stage 3 -->
           <div class="bg-cream rounded-2xl p-6 border border-navy/10 flex flex-col justify-between hover:border-tealBrand/50 transition-all">
             <div>
               <div class="text-center mb-4">
@@ -562,42 +531,32 @@
                   3. During Rehabilitation
                 </span>
               </div>
-              <!-- Mountain SVG 3 -->
               <div class="relative h-52 w-full flex items-end justify-center">
                 <svg viewBox="0 0 300 190" class="w-full h-full overflow-visible">
-                  <!-- Watercolor Mountain Shape -->
                   <path d="M15 175 L95 55 L115 65 L155 20 L195 55 L215 48 L285 175 Z" fill="#D2E5E0" stroke="#A7C9C0" stroke-width="1.5"/>
                   <path d="M55 175 L120 75 L155 20 L195 85 L245 175 Z" fill="#E3F0EC" opacity="0.7"/>
                   
-                  <!-- Rising Buffer Zone -->
                   <path d="M62 106 Q150 104 238 106 L252 130 Q150 128 48 130 Z" fill="#1D7865" opacity="0.2"/>
 
-                  <!-- Tissue Tolerance Line (Blue - Rising with arrow) -->
                   <path d="M62 106 Q150 104 238 106" stroke="#0B65C6" stroke-width="3.5" stroke-linecap="round" fill="none"/>
                   <line x1="92" y1="60" x2="108" y2="104" stroke="#0B65C6" stroke-width="1.5"/>
                   <text x="5" y="55" fill="#0B65C6" font-size="12" font-weight="700">Tissue Tolerance</text>
-
-                  <!-- Upward Blue Arrow -->
                   <path d="M210 102 V80 M204 86 L210 78 L216 86" stroke="#0B65C6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 
-                  <!-- Pain Protection Line (Green - Rising with arrow) -->
                   <path d="M48 130 Q150 128 252 130" stroke="#1E7E48" stroke-width="3.5" stroke-linecap="round" fill="none"/>
                   <line x1="65" y1="90" x2="80" y2="129" stroke="#1E7E48" stroke-width="1.5"/>
                   <text x="5" y="84" fill="#1E7E48" font-size="12" font-weight="700">Pain Protection</text>
-
-                  <!-- Upward Green Arrow -->
                   <path d="M210 128 V111 M204 117 L210 109 L216 117" stroke="#1E7E48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
             </div>
-
             <p class="mt-4 text-center text-navy font-semibold text-base leading-relaxed">
               Gradual rehabilitation can help rebuild strength, function, and tolerance for activity. Pain sensitivity may change at a different pace.
             </p>
           </div>
         </div>
 
-        <!-- Legend & Citation Footer -->
+        <!-- Citation -->
         <div class="mt-8 pt-5 border-t border-navy/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-navy/75">
           <div class="flex items-center gap-6 font-bold">
             <span class="flex items-center gap-2">
@@ -608,16 +567,15 @@
             </span>
           </div>
           <p class="italic text-center sm:text-right">
-            Concept based on the Twin Peaks Model in <em>Explain Pain Supercharged</em>, by G. Lorimer Moseley and David S. Butler, Noigroup Publications (2017), Fig. 1.3.
+            Concept based on the Twin Peaks Model in <em>Explain Pain Supercharged</em>, by G. Lorimer Moseley and David S. Butler, Noigroup Publications (2017).
           </p>
         </div>
       </div>
 
-      <!-- ==================== GUIDE 2: HEALING ISN'T LINEAR ==================== -->
+      <!-- GUIDE 2: HEALING ISN'T LINEAR -->
       <div id="guide-panel-linear" class="guide-panel hidden bg-white rounded-3xl p-6 sm:p-10 shadow-soft border border-navy/10">
         <div class="text-center max-w-2xl mx-auto mb-6">
           <div class="inline-flex items-center gap-2 text-tealBrand mb-1">
-            <!-- Mountain Sunrise Icon from Flyer -->
             <svg class="w-12 h-8" viewBox="0 0 60 40" fill="none">
               <path d="M5 36 L22 14 L32 26 L40 16 L55 36" stroke="#189AB4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M18 8 L21 12 M30 3 L30 9 M42 8 L39 12" stroke="#F3B33D" stroke-width="3" stroke-linecap="round"/>
@@ -629,68 +587,57 @@
           </p>
         </div>
 
-        <!-- Interactive SVG Recovery Graph (Matching "Healing Isn’t Linear Infographic.png") -->
         <div class="bg-cream rounded-2xl p-4 sm:p-8 border border-navy/10">
           <div class="max-w-4xl mx-auto">
             <svg viewBox="0 0 750 320" class="w-full h-auto overflow-visible">
-              <!-- Y-Axis Label -->
               <text x="-155" y="18" transform="rotate(-90)" text-anchor="middle" fill="#123A5A" font-size="12" font-weight="700" letter-spacing="1">
                 OVERALL FUNCTION / RECOVERY
               </text>
-
-              <!-- X-Axis Label -->
               <text x="390" y="310" text-anchor="middle" fill="#123A5A" font-size="13" font-weight="700" letter-spacing="1">
                 TIME
               </text>
 
-              <!-- Axes Lines with Arrows -->
               <path d="M50 280 L50 20" stroke="#123A5A" stroke-width="3" stroke-linecap="round"/>
               <path d="M44 30 L50 18 L56 30" stroke="#123A5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              
               <path d="M50 280 L710 280" stroke="#123A5A" stroke-width="3" stroke-linecap="round"/>
               <path d="M698 274 L710 280 L698 286" stroke="#123A5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
-              <!-- Upward Dashed Trendline -->
+              <!-- Trendline -->
               <line x1="65" y1="260" x2="675" y2="75" stroke="#5BC0DE" stroke-width="2.5" stroke-dasharray="8 8"/>
 
-              <!-- Jagged Real-World Recovery Line -->
-              <path class="recovery-path" d="M65 260 L105 230 L120 228 L145 205 L165 218 L180 232 L210 198 L235 182 L255 196 L280 215 L315 180 L345 162 L370 142 L395 158 L415 176 L445 152 L475 150 L495 158 L525 130 L565 102 L585 118 L605 140 L635 105 L650 92 L675 50" stroke="#0F4C75" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <!-- Trajectory -->
+              <path d="M65 260 L105 230 L120 228 L145 205 L165 218 L180 232 L210 198 L235 182 L255 196 L280 215 L315 180 L345 162 L370 142 L395 158 L415 176 L445 152 L475 150 L495 158 L525 130 L565 102 L585 118 L605 140 L635 105 L650 92 L675 50" stroke="#0F4C75" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
-              <!-- Start Point -->
               <circle cx="65" cy="260" r="6.5" fill="#123A5A"/>
               <text x="76" y="274" fill="#123A5A" font-size="14" font-weight="800">START</text>
 
-              <!-- Interactive Dip Point (Setback Callout) -->
               <g class="cursor-pointer" onclick="showGraphTip('dip')">
-                <circle cx="280" cy="215" r="7" fill="#F07870" stroke="#FAF8F3" stroke-width="2"/>
-                <text x="280" y="240" text-anchor="middle" fill="#B94A48" font-size="11" font-weight="700">Normal Dip (Click)</text>
+                <circle cx="280" cy="215" r="7" fill="#E26D65" stroke="#FAF8F3" stroke-width="2"/>
+                <text x="280" y="240" text-anchor="middle" fill="#B94A48" font-size="11" font-weight="700">Temporary Dip (Click)</text>
               </g>
 
-              <!-- Interactive Peak Point -->
               <g class="cursor-pointer" onclick="showGraphTip('adapt')">
                 <circle cx="475" cy="150" r="7" fill="#1D7865" stroke="#FAF8F3" stroke-width="2"/>
                 <text x="475" y="135" text-anchor="middle" fill="#1D7865" font-size="11" font-weight="700">Higher Baseline</text>
               </g>
 
-              <!-- Progress End Point -->
               <circle cx="675" cy="50" r="7" fill="#123A5A"/>
               <text x="675" y="34" text-anchor="middle" fill="#123A5A" font-size="15" font-weight="800">PROGRESS</text>
             </svg>
 
-            <!-- Dynamic Explanation Box under Graph -->
             <div id="graph-tip-box" class="mt-4 p-4 rounded-xl bg-skySoft/80 border border-skyCard text-center">
               <p class="font-hand text-3xl sm:text-4xl font-bold text-navy">
                 “A Setback is not the same as starting over.”
               </p>
               <p id="graph-tip-detail" class="text-sm sm:text-base text-navy/85 font-medium mt-1">
-                Notice how even during a temporary flare-up or dip, your overall function remains much higher than where you started. <strong>Trust the process. Keep moving forward.</strong>
+                Notice how even during a normal flare-up, your overall baseline is significantly higher than day one. <strong>Trust the process. Keep moving forward.</strong>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ==================== GUIDE 3: PLATEAU OF LATENT POTENTIAL ==================== -->
+      <!-- GUIDE 3: PLATEAU OF LATENT POTENTIAL -->
       <div id="guide-panel-plateau" class="guide-panel hidden bg-white rounded-3xl p-6 sm:p-10 shadow-soft border border-navy/10 space-y-8">
         <div class="text-center max-w-3xl mx-auto space-y-2">
           <div class="inline-flex items-center gap-2">
@@ -704,142 +651,124 @@
             Real change often happens before you can see it.
           </p>
           <p class="text-navy/80 text-sm sm:text-base pt-1">
-            Sometimes progress isn’t obvious at first. Your body is working, building, and adapting — even when the changes aren’t visible yet. This is the <strong class="text-tealBrand">plateau of latent potential</strong>.
+            Sometimes progress isn’t immediately visible on the outside. Your neuromuscular system is actively recruiting, adapting, and remodeling underneath.
           </p>
         </div>
 
-        <!-- Interactive Example 1: The Ice Cube Example -->
+        <!-- Ice Cube Interactive -->
         <div class="bg-skySoft/60 rounded-2xl p-6 sm:p-8 border border-skyCard">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div class="lg:col-span-5 space-y-3">
               <h4 class="font-hand text-3xl font-bold text-navy">The Ice Cube Example</h4>
               <p class="text-sm sm:text-base text-navy/85 leading-relaxed">
-                A block of ice looks the same from <strong>10°F to 31°F</strong>. You don’t see any change — but each degree brings it closer to the melting point.
+                A block of ice looks unchanged from <strong>10°F to 31°F</strong>. You don’t see movement, but each degree brings it closer to its melting point.
               </p>
               <p class="text-sm sm:text-base font-bold text-[#0969A6]">
-                At 32°F, it finally starts to melt.
+                At 32°F, it finally transforms.
               </p>
               <p class="text-xs sm:text-sm text-navy/75">
-                Small, unseen changes add up until the breakthrough happens.
+                Small, unseen adaptations compound until the physical breakthrough occurs.
               </p>
             </div>
 
-            <!-- Interactive Temperature Slider & Ice Cubes Visual -->
             <div class="lg:col-span-7 bg-white rounded-2xl p-5 border border-skyCard/80 shadow-sm">
               <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-bold uppercase tracking-wider text-navy/60">Drag slider to warm the room:</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-navy/60">Drag temperature slider:</span>
                 <span id="ice-status-badge" class="px-3 py-1 rounded-full bg-skySoft text-navy font-bold text-xs">
                   Looks the same... but change is happening.
                 </span>
               </div>
 
-              <!-- 6 Temperature Steps Matching the Infographic -->
               <div class="grid grid-cols-6 gap-2 text-center my-4">
-                <button onclick="setIceStep(0)" id="ice-box-0" class="ice-step-card p-2 rounded-xl border-2 border-navy bg-skySoft/40 transition-all">
+                <button onclick="setIceStep(0)" id="ice-box-0" class="p-2 rounded-xl border-2 border-navy bg-skySoft/40 transition-all">
                   <div class="text-2xl">🧊</div>
                   <div class="text-xs font-extrabold text-navy mt-1">10°F</div>
                 </button>
-                <button onclick="setIceStep(1)" id="ice-box-1" class="ice-step-card p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
+                <button onclick="setIceStep(1)" id="ice-box-1" class="p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
                   <div class="text-2xl">🧊</div>
                   <div class="text-xs font-bold text-navy mt-1">20°F</div>
                 </button>
-                <button onclick="setIceStep(2)" id="ice-box-2" class="ice-step-card p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
+                <button onclick="setIceStep(2)" id="ice-box-2" class="p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
                   <div class="text-2xl">🧊</div>
                   <div class="text-xs font-bold text-navy mt-1">25°F</div>
                 </button>
-                <button onclick="setIceStep(3)" id="ice-box-3" class="ice-step-card p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
+                <button onclick="setIceStep(3)" id="ice-box-3" class="p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
                   <div class="text-2xl">🧊</div>
                   <div class="text-xs font-bold text-navy mt-1">30°F</div>
                 </button>
-                <button onclick="setIceStep(4)" id="ice-box-4" class="ice-step-card p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
+                <button onclick="setIceStep(4)" id="ice-box-4" class="p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
                   <div class="text-2xl">🧊</div>
                   <div class="text-xs font-bold text-navy mt-1">31°F</div>
                 </button>
-                <button onclick="setIceStep(5)" id="ice-box-5" class="ice-step-card p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
+                <button onclick="setIceStep(5)" id="ice-box-5" class="p-2 rounded-xl border border-navy/15 bg-cream/50 transition-all">
                   <div class="text-2xl">💧</div>
                   <div class="text-xs font-extrabold text-tealBrand mt-1">32°F</div>
                 </button>
               </div>
 
-              <input id="ice-slider" type="range" min="0" max="5" value="0" step="1" oninput="setIceStep(this.value)" class="w-full my-2" aria-label="Ice Cube Temperature Step"/>
+              <input id="ice-slider" type="range" min="0" max="5" value="0" step="1" oninput="setIceStep(this.value)" class="w-full my-2" aria-label="Ice temperature step"/>
               <p id="ice-caption" class="text-xs sm:text-sm font-semibold text-center text-navy mt-2">
-                At 10°F: Solid ice. Your early exercises are laying the neural foundation.
+                At 10°F: Solid ice. Early exercises establish neural recruitment and joint tolerance.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Interactive Example 2: The Bamboo Example -->
+        <!-- Bamboo Example -->
         <div class="bg-tealSoft/60 rounded-2xl p-6 sm:p-8 border border-tealBrand/20">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div class="lg:col-span-5 space-y-3">
               <h4 class="font-hand text-3xl font-bold text-tealBrand">The Bamboo Example</h4>
               <p class="text-sm sm:text-base text-navy/85 leading-relaxed">
-                For the first few years, you may not see much growth above ground. But the bamboo is busy growing its roots underground.
+                For several years, little growth shows above ground as the plant anchors a profound root network.
               </p>
               <p class="text-sm sm:text-base text-navy/85 leading-relaxed">
-                After about 5 years of root development, it can grow up to <strong>90 feet (27 meters) in just 6 weeks!</strong>
+                Once the foundation is established, it can surge up to <strong>90 feet in just 6 weeks</strong>!
               </p>
               <p class="text-sm sm:text-base font-bold text-tealBrand">
-                What you can’t see is still progress.
+                What you can’t see is still essential progress.
               </p>
             </div>
 
-            <!-- Bamboo Root & Shoot Visual -->
             <div class="lg:col-span-7 bg-white rounded-2xl p-5 border border-tealBrand/20 shadow-sm">
               <div class="grid grid-cols-5 gap-2 items-end h-44 pt-4 px-2 bg-gradient-to-b from-skySoft/40 via-cream to-[#6B4F35]/20 rounded-xl relative overflow-hidden">
-                <!-- Year 1 -->
                 <div class="flex flex-col items-center">
                   <span class="text-[10px] font-bold text-navy/70 mb-1">Yr 1</span>
                   <div class="w-2 h-4 bg-emerald-600 rounded-t"></div>
-                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1">
-                    <span class="text-[10px] text-amber-200">Roots</span>
-                  </div>
+                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1"><span class="text-[10px] text-amber-200">Roots</span></div>
                 </div>
-                <!-- Year 2 -->
                 <div class="flex flex-col items-center">
                   <span class="text-[10px] font-bold text-navy/70 mb-1">Yr 2</span>
                   <div class="w-2.5 h-6 bg-emerald-600 rounded-t"></div>
-                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1">
-                    <span class="text-[10px] text-amber-200">Deeper</span>
-                  </div>
+                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1"><span class="text-[10px] text-amber-200">Deeper</span></div>
                 </div>
-                <!-- Year 3-4 -->
                 <div class="flex flex-col items-center">
                   <span class="text-[10px] font-bold text-navy/70 mb-1">Yr 3–4</span>
                   <div class="w-3 h-9 bg-emerald-600 rounded-t"></div>
-                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1">
-                    <span class="text-[10px] text-amber-200">Stronger</span>
-                  </div>
+                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1"><span class="text-[10px] text-amber-200">Stronger</span></div>
                 </div>
-                <!-- Year 5 -->
                 <div class="flex flex-col items-center">
                   <span class="text-[10px] font-bold text-navy/70 mb-1">Yr 5</span>
                   <div class="w-4 h-14 bg-emerald-600 rounded-t"></div>
-                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1">
-                    <span class="text-[10px] text-amber-200">Anchored</span>
-                  </div>
+                  <div class="w-full h-14 bg-[#6B4F35] rounded-b flex items-center justify-center p-1"><span class="text-[10px] text-amber-200">Anchored</span></div>
                 </div>
-                <!-- ~6 Weeks Breakthrough -->
                 <div class="flex flex-col items-center">
                   <span class="text-[10px] font-extrabold text-tealBrand mb-1">~6 Wks!</span>
                   <div class="w-6 h-24 bg-gradient-to-t from-emerald-700 to-emerald-500 rounded-t shadow-md flex items-center justify-center">
                     <span class="text-white text-[10px] font-bold rotate-[-90deg]">90ft!</span>
                   </div>
-                  <div class="w-full h-14 bg-[#5A3F28] rounded-b flex items-center justify-center p-1">
-                    <span class="text-[10px] text-amber-300 font-bold">Thriving</span>
-                  </div>
+                  <div class="w-full h-14 bg-[#5A3F28] rounded-b flex items-center justify-center p-1"><span class="text-[10px] text-amber-300 font-bold">Thriving</span></div>
                 </div>
               </div>
               <div class="flex justify-between text-xs font-bold text-navy/75 mt-3 px-1">
-                <span>Years 1–5: Roots grow underground</span>
-                <span class="text-tealBrand">~6 weeks: Rapid growth above ground!</span>
+                <span>Years 1–5: Deep root system builds</span>
+                <span class="text-tealBrand">~6 weeks: Rapid breakthrough!</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 4 Core Rehabilitation Pillars from Bottom of Flyer -->
+        <!-- 4 Pillars -->
         <div class="pt-2 text-center space-y-6">
           <p class="font-hand text-3xl sm:text-4xl font-bold text-navy">
             You may not see the progress yet, but every step counts.
@@ -847,7 +776,6 @@
 
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
             <div class="p-4 rounded-2xl bg-cream border border-navy/10 flex flex-col items-center gap-2">
-              <!-- Dumbbell Icon -->
               <svg class="w-9 h-9 text-navy" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 8v8m3-10v12m10-12v12m3-10v8M7 12h10"/>
               </svg>
@@ -855,7 +783,6 @@
             </div>
 
             <div class="p-4 rounded-2xl bg-cream border border-navy/10 flex flex-col items-center gap-2">
-              <!-- Mobility Runner Icon -->
               <svg class="w-9 h-9 text-tealBrand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <circle cx="15" cy="4" r="2"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l2-5 3 2v5M6 12l4-3 4 2 4-3"/>
@@ -864,7 +791,6 @@
             </div>
 
             <div class="p-4 rounded-2xl bg-cream border border-navy/10 flex flex-col items-center gap-2">
-              <!-- Brain/Coordination Icon -->
               <svg class="w-9 h-9 text-navyLight" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.5 3A3.5 3.5 0 006 6.5c0 .46.09.9.25 1.3A3.5 3.5 0 004 11c0 1.3.7 2.44 1.75 3.05A3.5 3.5 0 009 19.5h.5V3zm5 0A3.5 3.5 0 0118 6.5c0 .46-.09.9-.25 1.3A3.5 3.5 0 0120 11c0 1.3-.7 2.44-1.75 3.05A3.5 3.5 0 0115 19.5h-.5V3z"/>
               </svg>
@@ -872,7 +798,6 @@
             </div>
 
             <div class="p-4 rounded-2xl bg-cream border border-navy/10 flex flex-col items-center gap-2">
-              <!-- Heart Resilience Icon -->
               <svg class="w-9 h-9 text-coralBrand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
               </svg>
@@ -889,18 +814,17 @@
     </div>
   </section>
 
-  <!-- ================= PRICING & PACKAGES SECTION (Exact Match to Flyer) ================= -->
-  <section id="pricing" class="py-16 md:py-24 bg-white/80 border-t border-navy/10">
+  <!-- ================= SERVICES & CARE MODEL (NO PRICING) ================= -->
+  <section id="services" class="py-16 md:py-24 bg-white/80 border-t border-navy/10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Flyer-Style Header -->
+      <!-- Care Model Header -->
       <div class="text-center space-y-2 mb-12">
         <div class="inline-flex items-center justify-center gap-3">
           <span class="text-goldAccent text-2xl">✦</span>
-          <h2 class="font-hand text-5xl sm:text-6xl font-bold text-navy">Pricing &amp; Packages</h2>
+          <h2 class="font-hand text-5xl sm:text-6xl font-bold text-navy">Services &amp; Care Model</h2>
           <span class="text-goldAccent text-2xl">✦</span>
         </div>
-        <!-- Curved Gold Underline -->
         <div class="w-64 sm:w-80 h-3 mx-auto">
           <svg viewBox="0 0 300 16" fill="none" class="w-full h-full">
             <path d="M5 12 Q150 2 295 10" stroke="#F3B33D" stroke-width="5" stroke-linecap="round"/>
@@ -913,95 +837,75 @@
 
       <div class="space-y-6">
 
-        <!-- 1. Regular Single Session Card -->
-        <div class="rounded-3xl bg-skySoft p-6 sm:p-8 border border-skyCard shadow-card flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div class="flex items-center gap-5">
+        <!-- 1. Comprehensive One-on-One Sessions -->
+        <div class="rounded-3xl bg-skySoft p-6 sm:p-8 border border-skyCard shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="flex items-start sm:items-center gap-5">
             <div class="w-16 h-16 rounded-full bg-skyCard/80 text-navy flex items-center justify-center shrink-0">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
               </svg>
             </div>
-            <div>
-              <h3 class="text-xl sm:text-2xl font-extrabold text-navy">Regular Single Session</h3>
-              <div class="flex flex-wrap items-baseline gap-3 mt-1">
-                <span class="text-4xl sm:text-5xl font-extrabold text-navy">$80</span>
-                <span class="text-base sm:text-lg font-semibold text-navy/85">per full 60-minute session</span>
-              </div>
+            <div class="space-y-1">
+              <h3 class="text-xl sm:text-2xl font-extrabold text-navy">Comprehensive 1-on-1 Evaluations &amp; Treatments</h3>
+              <p class="text-base font-semibold text-navy/85">Full 60-Minute Dedicated Sessions</p>
+              <p class="text-sm text-navy/75 max-w-xl">
+                Every appointment is a dedicated hour focusing entirely on your functional movement, symptom relief, joint mechanics, and targeted exercise progression with Hanju Tsai.
+              </p>
             </div>
           </div>
-          <button onclick="selectPlanInEstimator('single')" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-navy text-white font-bold text-sm hover:bg-tealBrand transition-colors shrink-0">
-            Select Single Session
-          </button>
+          <a href="#contact" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-navy text-white font-bold text-sm hover:bg-tealBrand transition-colors text-center shrink-0">
+            Inquire Now
+          </a>
         </div>
 
-        <!-- 2. Bundle Packages Card -->
+        <!-- 2. Structured Rehabilitation Plans -->
         <div class="rounded-3xl bg-tealSoft p-6 sm:p-8 border border-tealBrand/25 shadow-card">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-6">
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-full bg-tealBrand/15 text-tealBrand flex items-center justify-center shrink-0">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
-                </svg>
+          <div class="flex items-center gap-4 mb-5">
+            <div class="w-14 h-14 rounded-full bg-tealBrand/15 text-tealBrand flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-goldAccent text-xl">★</span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-tealBrand">Consistent Rehabilitation &amp; Progression Plans</h3>
               </div>
-              <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-goldAccent text-xl">★</span>
-                  <h3 class="text-xl sm:text-2xl font-extrabold text-tealBrand">Bundle Packages</h3>
-                </div>
-                <p class="font-hand text-xl sm:text-2xl text-tealBrand">
-                  Recommended for Consistent Rehabilitation &amp; Best Results
-                </p>
-              </div>
+              <p class="font-hand text-xl sm:text-2xl text-tealBrand">
+                Recommended for Steady Functional Adaptation &amp; Best Clinical Outcomes
+              </p>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/80 rounded-2xl p-4 sm:p-6 border border-tealBrand/20">
-            <!-- 4 Sessions -->
-            <div class="text-center p-4 rounded-xl hover:bg-tealSoft/50 transition-colors sm:border-r border-tealBrand/20 flex flex-col justify-between">
-              <div>
-                <p class="text-3xl sm:text-4xl font-extrabold text-tealBrand">$300</p>
-                <p class="text-base font-semibold text-navy mt-1">for <strong>4</strong> sessions</p>
-                <p class="text-lg font-extrabold text-tealBrand mt-2">$75<span class="text-sm font-medium text-navy/80">/session</span></p>
-                <span class="inline-block mt-1 text-xs font-bold text-tealBrand bg-tealSoft px-2.5 py-0.5 rounded-full">Save $20</span>
-              </div>
-              <button onclick="selectPlanInEstimator('bundle4')" class="mt-4 w-full py-2.5 rounded-xl bg-tealBrand text-white font-bold text-xs uppercase tracking-wider hover:bg-navy transition-colors">
-                Choose 4-Pack
-              </button>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/80 rounded-2xl p-5 border border-tealBrand/20">
+            <div class="p-4 rounded-xl border border-tealBrand/15 bg-cream/40">
+              <span class="text-xs font-bold text-tealBrand uppercase tracking-wider block mb-1">Focused Plan</span>
+              <h4 class="text-lg font-bold text-navy">Targeted Recovery</h4>
+              <p class="text-xs text-navy/75 mt-2 leading-relaxed">
+                Ideal for acute post-injury care, targeted joint restoration, and initial symptom stabilization.
+              </p>
             </div>
 
-            <!-- 8 Sessions -->
-            <div class="text-center p-4 rounded-xl hover:bg-tealSoft/50 transition-colors sm:border-r border-tealBrand/20 flex flex-col justify-between">
-              <div>
-                <p class="text-3xl sm:text-4xl font-extrabold text-tealBrand">$500</p>
-                <p class="text-base font-semibold text-navy mt-1">for <strong>8</strong> sessions</p>
-                <p class="text-lg font-extrabold text-tealBrand mt-2">$62.50<span class="text-sm font-medium text-navy/80">/session</span></p>
-                <span class="inline-block mt-1 text-xs font-bold text-tealBrand bg-tealSoft px-2.5 py-0.5 rounded-full">Save $140</span>
-              </div>
-              <button onclick="selectPlanInEstimator('bundle8')" class="mt-4 w-full py-2.5 rounded-xl bg-tealBrand text-white font-bold text-xs uppercase tracking-wider hover:bg-navy transition-colors">
-                Choose 8-Pack
-              </button>
+            <div class="p-4 rounded-xl border border-tealBrand/15 bg-cream/40">
+              <span class="text-xs font-bold text-tealBrand uppercase tracking-wider block mb-1">Standard Plan</span>
+              <h4 class="text-lg font-bold text-navy">Comprehensive Rehab</h4>
+              <p class="text-xs text-navy/75 mt-2 leading-relaxed">
+                Designed for persistent conditions requiring guided strength building, motor control, and movement retraining.
+              </p>
             </div>
 
-            <!-- 10 Sessions (Best Value) -->
-            <div class="text-center p-4 rounded-xl bg-tealSoft/40 hover:bg-tealSoft/70 transition-colors relative flex flex-col justify-between">
-              <div>
-                <span class="inline-block mb-1 px-2.5 py-0.5 rounded-full bg-goldAccent text-navy font-extrabold text-[11px] uppercase tracking-wider">
-                  Best Per-Session Rate
-                </span>
-                <p class="text-3xl sm:text-4xl font-extrabold text-tealBrand">$600</p>
-                <p class="text-base font-semibold text-navy mt-1">for <strong>10</strong> sessions</p>
-                <p class="text-lg font-extrabold text-tealBrand mt-2">$60<span class="text-sm font-medium text-navy/80">/session</span></p>
-                <span class="inline-block mt-1 text-xs font-bold text-tealBrand bg-white px-2.5 py-0.5 rounded-full">Save $200</span>
-              </div>
-              <button onclick="selectPlanInEstimator('bundle10')" class="mt-4 w-full py-2.5 rounded-xl bg-navy text-white font-bold text-xs uppercase tracking-wider hover:bg-tealBrand transition-colors">
-                Choose 10-Pack
-              </button>
+            <div class="p-4 rounded-xl border-2 border-tealBrand/40 bg-tealSoft/30">
+              <span class="text-xs font-bold text-tealBrand uppercase tracking-wider block mb-1">Extended Plan</span>
+              <h4 class="text-lg font-bold text-navy">Complete Restoration</h4>
+              <p class="text-xs text-navy/75 mt-2 leading-relaxed">
+                Comprehensive long-term reconditioning to transition from pain management into high-level functional resilience.
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- 3. Couple / Family Sharing Package Card -->
-        <div class="rounded-3xl bg-lavenderSoft p-6 sm:p-8 border border-indigo-200 shadow-card flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- 3. Couple & Family Sharing Options -->
+        <div class="rounded-3xl bg-lavenderSoft p-6 sm:p-8 border border-indigo-200 shadow-card flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div class="flex items-start sm:items-center gap-5">
             <div class="w-16 h-16 rounded-full bg-indigo-200/80 text-navy flex items-center justify-center shrink-0">
               <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -1009,97 +913,48 @@
               </svg>
             </div>
             <div class="space-y-1">
-              <h3 class="text-xl sm:text-2xl font-extrabold text-navy">Couple / Family Sharing Package</h3>
-              <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                <span class="text-3xl sm:text-4xl font-extrabold text-navy">$940</span>
-                <span class="text-base sm:text-lg font-bold text-navy">for 15 sessions</span>
-                <span class="text-navy/40">|</span>
-                <span class="text-lg sm:text-xl font-extrabold text-navyLight">$62.67<span class="text-sm font-medium">/session</span></span>
-              </div>
-              <p class="text-sm sm:text-base text-navy/85 pt-1">
-                15 sessions can be flexibly shared between two people based on individual needs.
+              <h3 class="text-xl sm:text-2xl font-extrabold text-navy">Shared Family &amp; Caregiver Support Plans</h3>
+              <p class="text-sm sm:text-base text-navy/85">
+                Multi-session care plans can be flexibly shared between partners, family members, or caregivers based on individual rehabilitation requirements.
               </p>
             </div>
           </div>
-          <button onclick="selectPlanInEstimator('couple15')" class="w-full md:w-auto px-6 py-3 rounded-xl bg-navy text-white font-bold text-sm hover:bg-tealBrand transition-colors shrink-0">
-            Select 15-Session Share
-          </button>
+          <a href="#contact" class="w-full md:w-auto px-6 py-3 rounded-xl bg-navy text-white font-bold text-sm hover:bg-tealBrand transition-colors text-center shrink-0">
+            Discuss Shared Care
+          </a>
         </div>
 
-        <!-- 4. Family Member Add-On Plan Card -->
-        <div class="rounded-3xl bg-peachSoft p-6 sm:p-8 border border-amber-200 shadow-card">
-          <div class="flex items-start sm:items-center gap-5 mb-5">
-            <div class="w-16 h-16 rounded-full bg-amber-200/70 text-amber-900 flex items-center justify-center shrink-0">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-xl sm:text-2xl font-extrabold text-amber-900">Family Member Add-On Plan</h3>
-              <p class="text-sm sm:text-base text-navy/85 mt-1">
-                A second family member can receive the <strong>same per-session rate</strong> by purchasing more than 50% of the primary member’s package:
-              </p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-amber-100/60 rounded-2xl p-4 border border-amber-300/60 text-center">
-            <div class="p-3 rounded-xl bg-white/80">
-              <p class="text-sm font-semibold text-amber-950">4-session package &rarr;</p>
-              <p class="text-lg font-extrabold text-amber-900 mt-0.5">3+ sessions <span class="text-xs font-semibold">($75/ea)</span></p>
-            </div>
-            <div class="p-3 rounded-xl bg-white/80">
-              <p class="text-sm font-semibold text-amber-950">8-session package &rarr;</p>
-              <p class="text-lg font-extrabold text-amber-900 mt-0.5">5+ sessions <span class="text-xs font-semibold">($62.50/ea)</span></p>
-            </div>
-            <div class="p-3 rounded-xl bg-white/80">
-              <p class="text-sm font-semibold text-amber-950">10-session package &rarr;</p>
-              <p class="text-lg font-extrabold text-amber-900 mt-0.5">6+ sessions <span class="text-xs font-semibold">($60/ea)</span></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Bottom Two Info Cards: Package Validity & Travel Fee -->
+        <!-- 4. Location & Care Setting Options -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Package Validity -->
+          <!-- In-Clinic Care -->
           <div class="rounded-3xl bg-skySoft/80 p-6 sm:p-7 border border-skyCard flex items-start gap-4">
             <div class="w-14 h-14 rounded-full bg-skyCard text-navy flex items-center justify-center shrink-0">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
               </svg>
             </div>
-            <div class="space-y-2">
-              <h4 class="text-xl font-extrabold text-navy">Package Validity</h4>
-              <p class="text-sm sm:text-base text-navy/90">
-                All package sessions are valid for <strong class="text-navy underline decoration-goldAccent decoration-2">6 months</strong> from the date of purchase.
-              </p>
+            <div class="space-y-1.5">
+              <h4 class="text-xl font-extrabold text-navy">In-Clinic Sessions</h4>
+              <p class="text-sm font-semibold text-tealBrand">4220B Trinity Dr, Los Alamos, NM</p>
               <p class="text-xs sm:text-sm text-navy/75 leading-relaxed">
-                We encourage you to stay consistent with your treatment plan so you can make steady progress and get the most out of your rehabilitation.
+                Quiet, comfortable private clinical environment equipped for detailed physical evaluation, manual therapy, and movement education.
               </p>
             </div>
           </div>
 
-          <!-- Travel Fee -->
-          <div class="rounded-3xl bg-coralSoft p-6 sm:p-7 border border-coralBrand/30 flex items-start gap-4">
-            <div class="w-14 h-14 rounded-full bg-coralBrand/25 text- ruby-900 flex items-center justify-center shrink-0 text-[#9B2C2C]">
+          <!-- In-Home Mobile Visits -->
+          <div class="rounded-3xl bg-peachSoft/80 p-6 sm:p-7 border border-amber-200 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-full bg-amber-200/70 text-amber-900 flex items-center justify-center shrink-0">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
               </svg>
             </div>
-            <div class="space-y-2 w-full">
-              <h4 class="text-xl font-extrabold text-[#8B1E3F]">Home Visit Travel Fee</h4>
-              <p class="text-xs sm:text-sm text-navy/80">
-                Prefer physical therapy in the comfort of your home?
+            <div class="space-y-1.5">
+              <h4 class="text-xl font-extrabold text-amber-900">In-Home Mobile Visits</h4>
+              <p class="text-sm font-semibold text-navy/80">Serving Los Alamos &amp; White Rock</p>
+              <p class="text-xs sm:text-sm text-navy/75 leading-relaxed">
+                Receive physical therapy directly in the convenience of your own home, addressing functional challenges within your everyday environment.
               </p>
-              <ul class="space-y-1.5 text-sm sm:text-base font-bold text-[#8B1E3F] pt-1">
-                <li class="flex items-center justify-between bg-white/70 px-3.5 py-2 rounded-xl">
-                  <span>• Los Alamos Home Visit:</span>
-                  <span class="text-navy font-extrabold">+$10 <span class="text-xs font-normal">/ visit</span></span>
-                </li>
-                <li class="flex items-center justify-between bg-white/70 px-3.5 py-2 rounded-xl">
-                  <span>• White Rock Home Visit:</span>
-                  <span class="text-navy font-extrabold">+$20 <span class="text-xs font-normal">/ visit</span></span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -1108,127 +963,12 @@
     </div>
   </section>
 
-  <!-- ================= INTERACTIVE PACKAGE & COST ESTIMATOR ================= -->
-  <section id="estimator" class="py-14">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-navy text-cream rounded-3xl p-6 sm:p-10 shadow-soft relative overflow-hidden">
-        <div class="max-w-2xl mb-8">
-          <span class="px-3 py-1 rounded-full bg-tealBrand text-white text-xs font-bold uppercase tracking-wider">
-            Interactive Calculator
-          </span>
-          <h3 class="font-serif text-3xl sm:text-4xl font-bold mt-2">
-            Session &amp; Package Cost Estimator
-          </h3>
-          <p class="text-skyCard text-sm sm:text-base mt-1">
-            Customize your package, optional family add-on sessions, and location to see your total investment and savings.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <!-- Left Controls -->
-          <div class="md:col-span-7 space-y-5">
-            <!-- 1. Select Primary Package -->
-            <div>
-              <label for="calc-package" class="block text-xs font-bold uppercase tracking-wider text-skyCard mb-2">
-                1. Choose Primary Package
-              </label>
-              <select id="calc-package" onchange="updateEstimator()" class="w-full px-4 py-3.5 rounded-xl bg-white text-navy font-bold text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-goldAccent">
-                <option value="single">Regular Single Session — 1 Session ($80)</option>
-                <option value="bundle4">4-Session Bundle — $300 ($75/session)</option>
-                <option value="bundle8" selected>8-Session Bundle — $500 ($62.50/session)</option>
-                <option value="bundle10">10-Session Bundle — $600 ($60/session • Best Rate)</option>
-                <option value="couple15">Couple / Family Share — 15 Sessions ($940 • $62.67/session)</option>
-              </select>
-            </div>
-
-            <!-- 2. Family Add-On Selector (Only active for 4, 8, or 10 bundle) -->
-            <div id="addon-container" class="p-4 rounded-2xl bg-white/10 border border-white/15 space-y-3">
-              <div class="flex items-center justify-between">
-                <label for="calc-addon-toggle" class="text-sm font-bold text-white flex items-center gap-2 cursor-pointer">
-                  <input id="calc-addon-toggle" type="checkbox" onchange="updateEstimator()" class="w-4 h-4 rounded accent-goldAccent"/>
-                  Add 2nd Family Member Add-On Plan?
-                </label>
-                <span id="addon-min-rule" class="text-xs text-goldAccent font-semibold">Min 5 sessions ($62.50/ea)</span>
-              </div>
-              <div id="addon-slider-wrap" class="hidden pt-1">
-                <div class="flex justify-between text-xs text-skyCard mb-1">
-                  <span>Additional Family Member Sessions:</span>
-                  <span id="addon-count-label" class="font-bold text-white">5 sessions</span>
-                </div>
-                <input id="calc-addon-count" type="range" min="5" max="12" value="5" oninput="updateEstimator()" class="w-full"/>
-              </div>
-            </div>
-
-            <!-- 3. Select Visit Location -->
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-skyCard mb-2">
-                2. Session Location (Clinic vs. Home Visit)
-              </label>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                <button type="button" onclick="setLocationFee('clinic')" id="loc-btn-clinic" class="loc-btn px-3 py-3 rounded-xl font-bold text-xs sm:text-sm bg-goldAccent text-navy shadow-sm transition-all">
-                  Clinic (4220B Trinity)<br/><span class="text-[11px] font-semibold">+$0 / visit</span>
-                </button>
-                <button type="button" onclick="setLocationFee('losalamos')" id="loc-btn-losalamos" class="loc-btn px-3 py-3 rounded-xl font-bold text-xs sm:text-sm bg-white/10 text-white hover:bg-white/20 transition-all">
-                  Los Alamos Home<br/><span class="text-[11px] font-normal text-skyCard">+$10 / visit</span>
-                </button>
-                <button type="button" onclick="setLocationFee('whiterock')" id="loc-btn-whiterock" class="loc-btn px-3 py-3 rounded-xl font-bold text-xs sm:text-sm bg-white/10 text-white hover:bg-white/20 transition-all">
-                  White Rock Home<br/><span class="text-[11px] font-normal text-skyCard">+$20 / visit</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Summary Breakdown -->
-          <div class="md:col-span-5 bg-cream text-navy rounded-2xl p-6 shadow-lg space-y-4">
-            <div class="flex items-center justify-between border-b border-navy/10 pb-3">
-              <span class="text-xs font-bold uppercase tracking-wider text-navy/60">Estimated Summary</span>
-              <span id="summary-sessions-badge" class="px-2.5 py-1 rounded-full bg-tealSoft text-tealBrand font-extrabold text-xs">
-                8 Total Sessions
-              </span>
-            </div>
-
-            <div class="space-y-2 text-sm">
-              <div class="flex justify-between">
-                <span class="text-navy/75">Primary Package:</span>
-                <span id="summary-base-cost" class="font-bold">$500.00</span>
-              </div>
-              <div id="summary-addon-row" class="hidden flex justify-between text-tealBrand">
-                <span>Family Add-On:</span>
-                <span id="summary-addon-cost" class="font-bold">+$0.00</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-navy/75">Travel Fee:</span>
-                <span id="summary-travel-cost" class="font-bold">$0.00</span>
-              </div>
-              <div class="flex justify-between pt-2 border-t border-navy/10 text-base font-extrabold">
-                <span>Effective Rate:</span>
-                <span id="summary-per-session" class="text-tealBrand">$62.50 / session</span>
-              </div>
-            </div>
-
-            <div class="bg-skySoft/80 rounded-xl p-4 text-center">
-              <span class="block text-xs uppercase font-bold text-navy/70">Estimated Total</span>
-              <span id="summary-total" class="font-serif font-bold text-4xl text-navy">$500.00</span>
-              <span id="summary-savings" class="block text-xs font-bold text-tealBrand mt-1">
-                You save $140.00 compared to single sessions!
-              </span>
-            </div>
-
-            <button onclick="prefillBookingFromEstimator()" class="w-full py-3.5 rounded-xl bg-navy text-white font-bold text-sm hover:bg-tealBrand transition-colors shadow-sm">
-              Inquire About This Package &rarr;
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= COMMUNITY REFERRAL PROGRAM SECTION (Exact Match to Flyer) ================= -->
+  <!-- ================= COMMUNITY REFERRAL PROGRAM (NO MONETARY VALUES) ================= -->
   <section id="referral" class="py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white rounded-3xl p-6 sm:p-12 shadow-soft border border-navy/10 text-center relative overflow-hidden">
         
-        <!-- Headline with Sunburst Accents -->
+        <!-- Headline -->
         <div class="max-w-xl mx-auto space-y-2">
           <div class="inline-flex items-center gap-3">
             <span class="text-goldAccent text-2xl font-bold">☀️</span>
@@ -1244,9 +984,8 @@
           </div>
         </div>
 
-        <!-- Megaphone Callout Box -->
+        <!-- Megaphone Callout -->
         <div class="mt-8 bg-skySoft rounded-3xl p-6 sm:p-8 border border-skyCard flex flex-col sm:flex-row items-center gap-6 text-left max-w-2xl mx-auto">
-          <!-- Megaphone SVG -->
           <div class="w-20 h-20 rounded-2xl bg-white flex items-center justify-center shrink-0 shadow-sm">
             <svg class="w-12 h-12 text-[#0B65C6]" viewBox="0 0 48 48" fill="none">
               <path d="M10 20L32 10V36L10 26V20Z" fill="#5BC0DE" stroke="#123A5A" stroke-width="2.5" stroke-linejoin="round"/>
@@ -1256,26 +995,25 @@
             </svg>
           </div>
           <p class="text-base sm:text-lg text-navy font-medium leading-relaxed">
-            If you’ve had a positive experience with me, I’d truly appreciate you sharing my information with friends or family members who could benefit from PT.
+            If you’ve had a positive experience with me, I’d truly appreciate you sharing my information with friends or family members who could benefit from physical therapy.
           </p>
         </div>
 
         <!-- Subtitle -->
         <div class="mt-8 space-y-1">
           <p class="text-base sm:text-xl font-semibold text-navy">
-            As a small thank-you for your support,
+            As a heartfelt thank-you for helping our community thrive,
           </p>
           <p class="text-2xl sm:text-3xl font-extrabold text-tealBrand">
-            both you and your friend <span class="text-navy font-semibold">will receive</span>
+            both you and your friend <span class="text-navy font-semibold">receive special referral appreciation</span>
           </p>
         </div>
 
-        <!-- Two Perforated Ticket Cards: YOU & YOUR FRIEND -->
+        <!-- Two Perforated Ticket Cards (You & Your Friend) -->
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-11 gap-4 items-center max-w-2xl mx-auto">
           
-          <!-- Left Ticket: YOU -->
+          <!-- You -->
           <div class="sm:col-span-5 flex flex-col items-center">
-            <!-- Avatar Illustration -->
             <div class="w-16 h-16 rounded-full bg-skySoft border-2 border-tealBrand flex items-center justify-center mb-2">
               <svg class="w-10 h-10 text-tealBrand" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
@@ -1283,8 +1021,8 @@
             </div>
             <div class="ticket-card w-full bg-tealBrand text-white p-5 shadow-md">
               <div class="border-2 border-dashed border-white/70 rounded-xl py-4 px-3">
-                <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">$10 OFF</p>
-                <p class="text-base font-semibold text-tealSoft mt-0.5">next payment</p>
+                <p class="text-2xl sm:text-3xl font-extrabold tracking-tight">Referral Reward</p>
+                <p class="text-sm font-semibold text-tealSoft mt-0.5">Applied to your next care session</p>
               </div>
             </div>
             <span class="mt-3 px-6 py-1 rounded-full bg-tealSoft text-tealBrand font-extrabold text-sm">
@@ -1292,14 +1030,13 @@
             </span>
           </div>
 
-          <!-- Center Ampersand -->
+          <!-- Ampersand -->
           <div class="sm:col-span-1 flex items-center justify-center py-2">
             <span class="font-serif font-extrabold text-4xl text-navy">&amp;</span>
           </div>
 
-          <!-- Right Ticket: YOUR FRIEND -->
+          <!-- Your Friend -->
           <div class="sm:col-span-5 flex flex-col items-center">
-            <!-- Avatar Illustration -->
             <div class="w-16 h-16 rounded-full bg-coralSoft border-2 border-coralBrand flex items-center justify-center mb-2">
               <svg class="w-10 h-10 text-coralBrand" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
@@ -1307,8 +1044,8 @@
             </div>
             <div class="ticket-card w-full bg-coralBrand text-white p-5 shadow-md">
               <div class="border-2 border-dashed border-white/70 rounded-xl py-4 px-3">
-                <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">$10 OFF</p>
-                <p class="text-base font-semibold text-coralSoft mt-0.5">next payment</p>
+                <p class="text-2xl sm:text-3xl font-extrabold tracking-tight">Welcome Gift</p>
+                <p class="text-sm font-semibold text-coralSoft mt-0.5">Applied to their initial treatment</p>
               </div>
             </div>
             <span class="mt-3 px-6 py-1 rounded-full bg-coralSoft text-[#B84A42] font-extrabold text-sm">
@@ -1318,7 +1055,7 @@
 
         </div>
 
-        <!-- Thank You + Quick Share Actions -->
+        <!-- Thank you -->
         <div class="mt-10 space-y-5">
           <p class="font-hand text-3xl sm:text-4xl text-navy">
             Thank you for being part of my PT community!
@@ -1334,7 +1071,7 @@
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
               </svg>
-              Copy Referral Note for a Friend
+              Copy Referral Note to Share
             </button>
             <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-skySoft text-navy font-bold text-sm hover:bg-skyCard transition-colors">
               Book with Referral
@@ -1346,12 +1083,12 @@
     </div>
   </section>
 
-  <!-- ================= CONTACT & BOOKING INQUIRY SECTION ================= -->
+  <!-- ================= CONTACT & BOOKING SECTION ================= -->
   <section id="contact" class="py-16 md:py-24 bg-white border-t border-navy/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         
-        <!-- Left Column: Direct Contact Details & Location -->
+        <!-- Direct Contact Details -->
         <div class="lg:col-span-5 space-y-6">
           <div>
             <span class="px-3.5 py-1 rounded-full bg-tealSoft text-tealBrand font-bold text-xs uppercase tracking-widest">
@@ -1361,7 +1098,7 @@
               Start Your Healing Journey
             </h2>
             <p class="text-navy/75 text-base mt-2 leading-relaxed">
-              Reach out directly by phone, text, or email, or submit the form to connect with Physical Therapist <strong>Hanju Tsai</strong>.
+              Reach out directly to Physical Therapist <strong>Hanju Tsai</strong> to discuss your goals, schedule an evaluation, or learn more about care options.
             </p>
           </div>
 
@@ -1394,10 +1131,10 @@
                 </div>
                 <div class="truncate">
                   <p class="text-xs font-bold uppercase tracking-wider text-navy/60">Email Address</p>
-                  <a href="mailto:tsai.hanju@gmail.com" class="text-base sm:text-lg font-bold text-navy hover:text-tealBrand truncate block">tsai.hanju@gmail.com</a>
+                  <a href="mailto:healingthriving.pt@gmail.com" class="text-base sm:text-lg font-bold text-navy hover:text-tealBrand truncate block">healingthriving.pt@gmail.com</a>
                 </div>
               </div>
-              <button onclick="copyText('tsai.hanju@gmail.com', 'Email address copied!')" class="px-3 py-1.5 rounded-lg bg-white border border-navy/15 text-xs font-bold text-navy hover:bg-skySoft shrink-0">
+              <button onclick="copyText('healingthriving.pt@gmail.com', 'Email copied!')" class="px-3 py-1.5 rounded-lg bg-white border border-navy/15 text-xs font-bold text-navy hover:bg-skySoft shrink-0">
                 Copy
               </button>
             </div>
@@ -1422,7 +1159,7 @@
               </a>
             </div>
 
-            <!-- Download vCard action -->
+            <!-- Save vCard -->
             <div class="pt-1">
               <button onclick="downloadVCard()" class="w-full py-3 px-4 rounded-xl border border-navy/20 bg-cream text-navy hover:bg-skySoft font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
                 <svg class="w-4 h-4 text-tealBrand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -1434,14 +1171,14 @@
           </div>
         </div>
 
-        <!-- Right Column: Static-Ready Booking Inquiry Form -->
+        <!-- Appointment Inquiry Form -->
         <div class="lg:col-span-7">
           <div class="bg-cream rounded-3xl p-6 sm:p-9 border border-navy/10 shadow-card">
             <h3 class="font-serif text-2xl sm:text-3xl font-bold text-navy mb-1">
               Request an Appointment or Ask a Question
             </h3>
             <p class="text-xs sm:text-sm text-navy/70 mb-6">
-              Fill out your preferred details below to send an email or text directly to Hanju Tsai.
+              Send your request directly to Physical Therapist Hanju Tsai via email or text message.
             </p>
 
             <form id="inquiry-form" onsubmit="handleInquirySubmit(event)" class="space-y-4">
@@ -1458,34 +1195,32 @@
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="form-package" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">Interested Package</label>
-                  <select id="form-package" class="w-full px-4 py-3 rounded-xl bg-white border border-navy/15 text-navy font-medium focus:outline-none focus:border-tealBrand">
-                    <option value="Single Session ($80 / 60-min)">Single Session ($80 / 60-min)</option>
-                    <option value="4-Session Bundle ($300)">4-Session Bundle ($300)</option>
-                    <option value="8-Session Bundle ($500)" selected>8-Session Bundle ($500)</option>
-                    <option value="10-Session Bundle ($600)">10-Session Bundle ($600)</option>
-                    <option value="Couple / Family 15-Session Package ($940)">Couple / Family 15-Session Package ($940)</option>
-                    <option value="General Inquiry / Not Sure Yet">General Inquiry / Not Sure Yet</option>
+                  <label for="form-care-type" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">Area of Interest</label>
+                  <select id="form-care-type" class="w-full px-4 py-3 rounded-xl bg-white border border-navy/15 text-navy font-medium focus:outline-none focus:border-tealBrand">
+                    <option value="Initial Evaluation & Treatment">Initial Evaluation &amp; Treatment</option>
+                    <option value="Comprehensive Rehabilitation Plan">Comprehensive Rehabilitation Plan</option>
+                    <option value="Shared Family / Caregiver Plan">Shared Family / Caregiver Plan</option>
+                    <option value="General Question / Consultation">General Question / Consultation</option>
                   </select>
                 </div>
                 <div>
-                  <label for="form-location" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">Preferred Visit Type</label>
+                  <label for="form-location" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">Preferred Setting</label>
                   <select id="form-location" class="w-full px-4 py-3 rounded-xl bg-white border border-navy/15 text-navy font-medium focus:outline-none focus:border-tealBrand">
-                    <option value="Clinic Visit (4220B Trinity Dr)">Clinic Visit (4220B Trinity Dr)</option>
-                    <option value="Los Alamos Home Visit (+$10/visit)">Los Alamos Home Visit (+$10/visit)</option>
-                    <option value="White Rock Home Visit (+$20/visit)">White Rock Home Visit (+$20/visit)</option>
+                    <option value="In-Clinic Visit (4220B Trinity Dr)">In-Clinic Visit (4220B Trinity Dr)</option>
+                    <option value="Los Alamos Mobile Home Visit">Los Alamos Mobile Home Visit</option>
+                    <option value="White Rock Mobile Home Visit">White Rock Mobile Home Visit</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label for="form-referral" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">Referred by a Friend? ($10 Off for Both!)</label>
-                <input id="form-referral" type="text" placeholder="Optional: Enter friend's name for $10 off" class="w-full px-4 py-3 rounded-xl bg-white border border-navy/15 text-navy focus:outline-none focus:border-tealBrand"/>
+                <label for="form-referral" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">Referred by a Friend or Family Member?</label>
+                <input id="form-referral" type="text" placeholder="Optional: Enter their name so we can thank them" class="w-full px-4 py-3 rounded-xl bg-white border border-navy/15 text-navy focus:outline-none focus:border-tealBrand"/>
               </div>
 
               <div>
-                <label for="form-notes" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">How can we help you? (Goals, symptoms, or schedule preference)</label>
-                <textarea id="form-notes" rows="3" placeholder="Tell Hanju a little about what you'd like to work on..." class="w-full px-4 py-3 rounded-xl bg-white border border-navy/15 text-navy focus:outline-none focus:border-tealBrand"></textarea>
+                <label for="form-notes" class="block text-xs font-bold uppercase tracking-wider text-navy/80 mb-1">How can we help? (Symptoms, rehabilitation goals, or schedule preferences)</label>
+                <textarea id="form-notes" rows="3" placeholder="Tell Hanju a little about what you are seeking care for..." class="w-full px-4 py-3 rounded-xl bg-white border border-navy/15 text-navy focus:outline-none focus:border-tealBrand"></textarea>
               </div>
 
               <div class="pt-2 flex flex-col sm:flex-row gap-3">
@@ -1510,11 +1245,10 @@
     </div>
   </section>
 
-  <!-- ================= MINIMAL CLEAN FOOTER ================= -->
+  <!-- ================= FOOTER ================= -->
   <footer class="bg-navy text-cream py-10 border-t border-white/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-white/10">
-        <!-- Brand Identity with Figurine Logo -->
         <div class="flex items-center gap-3.5">
           <div class="w-11 h-11 rounded-full bg-white/90 p-1 border border-white/40 flex items-center justify-center overflow-hidden shadow-sm shrink-0">
             <img src="logo.png" 
@@ -1528,15 +1262,14 @@
           </div>
         </div>
 
-        <!-- Direct Anchor Links -->
         <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm font-semibold text-skyCard">
           <a href="#about" class="hover:text-white transition-colors">About</a>
           <span>•</span>
           <a href="#recovery-guides" class="hover:text-white transition-colors">Recovery Guides</a>
           <span>•</span>
-          <a href="#pricing" class="hover:text-white transition-colors">Pricing &amp; Packages</a>
+          <a href="#services" class="hover:text-white transition-colors">Services &amp; Care Model</a>
           <span>•</span>
-          <a href="#referral" class="hover:text-white transition-colors">Referral Gift</a>
+          <a href="#referral" class="hover:text-white transition-colors">Referral Appreciation</a>
           <span>•</span>
           <a href="#contact" class="hover:text-white transition-colors">Contact</a>
         </div>
@@ -1549,9 +1282,9 @@
     </div>
   </footer>
 
-  <!-- ================= APPLICATION JAVASCRIPT ================= -->
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
-    // Ensure favicon loads properly regardless of which filename was pushed to GitHub Pages
+    // Automatic Favicon fallback verification
     (function initFavicon() {
       const favicon = document.getElementById('site-favicon');
       const testImg = new Image();
@@ -1568,10 +1301,10 @@
       };
     })();
 
-    // Set current year in footer
+    // Year
     document.getElementById('year-span').textContent = new Date().getFullYear();
 
-    // Mobile Menu Toggle
+    // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const iconOpen = document.getElementById('menu-icon-open');
@@ -1592,7 +1325,7 @@
       });
     });
 
-    // Toast notification helper (replaces alert())
+    // Toast helper
     function showToast(message) {
       const container = document.getElementById('toast-container');
       const toast = document.createElement('div');
@@ -1610,7 +1343,7 @@
       }, 3200);
     }
 
-    // Clipboard copy helper (with fallback for iframe compatibility)
+    // Clipboard copy helper
     function copyText(text, successMsg) {
       const textArea = document.createElement('textarea');
       textArea.value = text;
@@ -1623,12 +1356,12 @@
         document.execCommand('copy');
         showToast(successMsg || 'Copied to clipboard!');
       } catch (err) {
-        showToast('Copy value: ' + text);
+        showToast('Value: ' + text);
       }
       document.body.removeChild(textArea);
     }
 
-    // Patient Education Guide Tabs Switcher
+    // Patient Education Tabs Switcher
     function switchGuideTab(tabKey) {
       const tabs = ['pain', 'linear', 'plateau'];
       tabs.forEach(key => {
@@ -1644,24 +1377,24 @@
       });
     }
 
-    // Interactive Graph Callout inside "Healing Isn't Linear"
+    // Graph inspection
     function showGraphTip(type) {
       const detail = document.getElementById('graph-tip-detail');
       if (type === 'dip') {
-        detail.innerHTML = '<strong>Why dips happen:</strong> Trying a new activity, a busy week, or normal tissue remodeling can temporarily increase soreness. It does <em>not</em> erase the strength you have already built!';
+        detail.innerHTML = '<strong>Why temporary dips occur:</strong> Testing higher loads, fatigue, or normal tissue adaptation can temporarily heighten sensitivity. It does <em>not</em> erase the capacity already built!';
       } else {
-        detail.innerHTML = '<strong>Higher Baseline:</strong> Each peak and recovery cycle raises your body’s overall function and load tolerance higher than before.';
+        detail.innerHTML = '<strong>Higher Baseline:</strong> Each rehabilitation progression cycle raises your body’s tolerance threshold higher than before.';
       }
     }
 
-    // Interactive Ice Cube Slider inside "Plateau of Latent Potential"
+    // Ice Cube Slider
     const iceSteps = [
-      { temp: '10°F', badge: 'Looks the same... but change is happening.', caption: 'At 10°F: Solid ice. Your early exercises are laying the neural foundation.' },
-      { temp: '20°F', badge: 'Looks the same... internal energy rising.', caption: 'At 20°F: Still looks frozen on the surface, but your tissues are adapting.' },
-      { temp: '25°F', badge: 'Looks the same... building consistency.', caption: 'At 25°F: Coordination and blood flow are steadily improving underneath.' },
-      { temp: '30°F', badge: 'Almost at the threshold!', caption: 'At 30°F: You are very close to the breakthrough—keep showing up!' },
-      { temp: '31°F', badge: 'Right on the edge of visible change!', caption: 'At 31°F: One degree away from the tipping point.' },
-      { temp: '32°F', badge: 'Then it melts! Breakthrough happens!', caption: 'At 32°F: Small, unseen changes add up until the breakthrough happens!' }
+      { temp: '10°F', badge: 'Looks the same... but change is happening.', caption: 'At 10°F: Solid ice. Early exercises establish neural recruitment and joint tolerance.' },
+      { temp: '20°F', badge: 'Looks the same... internal adaptations begin.', caption: 'At 20°F: Still looks unchanged on the surface, but cellular adaptation is underway.' },
+      { temp: '25°F', badge: 'Looks the same... building movement capacity.', caption: 'At 25°F: Motor coordination and tissue tolerance are compounding.' },
+      { temp: '30°F', badge: 'Approaching the adaptation threshold!', caption: 'At 30°F: You are very close to the breakthrough—consistency is key!' },
+      { temp: '31°F', badge: 'Right at the edge of noticeable change!', caption: 'At 31°F: One step away from clear functional improvement.' },
+      { temp: '32°F', badge: 'Then it transforms! Breakthrough achieved!', caption: 'At 32°F: Small unseen changes compound until meaningful breakthrough occurs!' }
     ];
 
     function setIceStep(index) {
@@ -1673,152 +1406,20 @@
       for (let i = 0; i < 6; i++) {
         const box = document.getElementById(`ice-box-${i}`);
         if (i === idx) {
-          box.className = 'ice-step-card p-2 rounded-xl border-2 border-navy bg-skySoft shadow-sm scale-105 transition-all';
+          box.className = 'p-2 rounded-xl border-2 border-navy bg-skySoft shadow-sm scale-105 transition-all';
         } else {
-          box.className = 'ice-step-card p-2 rounded-xl border border-navy/15 bg-cream/50 opacity-75 transition-all';
+          box.className = 'p-2 rounded-xl border border-navy/15 bg-cream/50 opacity-75 transition-all';
         }
       }
     }
 
-    // Interactive Cost Estimator State & Logic
-    let selectedLocation = 'clinic'; // 'clinic' ($0), 'losalamos' ($10), 'whiterock' ($20)
-
-    const packageCatalog = {
-      single:   { name: 'Single Session ($80 / 60-min)', sessions: 1, basePrice: 80, perSession: 80, allowAddon: false },
-      bundle4:  { name: '4-Session Bundle ($300)', sessions: 4, basePrice: 300, perSession: 75, allowAddon: true, minAddon: 3 },
-      bundle8:  { name: '8-Session Bundle ($500)', sessions: 8, basePrice: 500, perSession: 62.5, allowAddon: true, minAddon: 5 },
-      bundle10: { name: '10-Session Bundle ($600)', sessions: 10, basePrice: 600, perSession: 60, allowAddon: true, minAddon: 6 },
-      couple15: { name: 'Couple / Family 15-Session Package ($940)', sessions: 15, basePrice: 940, perSession: 62.67, allowAddon: false }
-    };
-
-    function setLocationFee(loc) {
-      selectedLocation = loc;
-      const locs = ['clinic', 'losalamos', 'whiterock'];
-      locs.forEach(key => {
-        const btn = document.getElementById(`loc-btn-${key}`);
-        if (key === loc) {
-          btn.className = 'loc-btn px-3 py-3 rounded-xl font-bold text-xs sm:text-sm bg-goldAccent text-navy shadow-sm transition-all';
-        } else {
-          btn.className = 'loc-btn px-3 py-3 rounded-xl font-bold text-xs sm:text-sm bg-white/10 text-white hover:bg-white/20 transition-all';
-        }
-      });
-      updateEstimator();
-    }
-
-    function selectPlanInEstimator(planKey) {
-      const select = document.getElementById('calc-package');
-      select.value = planKey;
-      updateEstimator();
-      document.getElementById('estimator').scrollIntoView({ behavior: 'smooth' });
-      showToast('Updated estimator with your selected package!');
-    }
-
-    function updateEstimator() {
-      const pkgKey = document.getElementById('calc-package').value;
-      const pkg = packageCatalog[pkgKey];
-      const addonToggle = document.getElementById('calc-addon-toggle');
-      const addonContainer = document.getElementById('addon-container');
-      const addonSliderWrap = document.getElementById('addon-slider-wrap');
-      const addonCountInput = document.getElementById('calc-addon-count');
-      const addonMinRule = document.getElementById('addon-min-rule');
-
-      // Handle Family Add-on visibility and minimum rules (>50% of primary package)
-      let addonSessions = 0;
-      let addonCost = 0;
-
-      if (pkg.allowAddon) {
-        addonContainer.classList.remove('opacity-40', 'pointer-events-none');
-        addonMinRule.textContent = `Min ${pkg.minAddon}+ sessions ($${pkg.perSession.toFixed(2)}/ea)`;
-        if (parseInt(addonCountInput.min, 10) !== pkg.minAddon) {
-          addonCountInput.min = pkg.minAddon;
-          if (parseInt(addonCountInput.value, 10) < pkg.minAddon) {
-            addonCountInput.value = pkg.minAddon;
-          }
-        }
-        if (addonToggle.checked) {
-          addonSliderWrap.classList.remove('hidden');
-          addonSessions = parseInt(addonCountInput.value, 10);
-          addonCost = addonSessions * pkg.perSession;
-          document.getElementById('addon-count-label').textContent = `${addonSessions} sessions (+$${addonCost.toFixed(2)})`;
-        } else {
-          addonSliderWrap.classList.add('hidden');
-        }
-      } else {
-        addonToggle.checked = false;
-        addonSliderWrap.classList.add('hidden');
-        addonContainer.classList.add('opacity-40', 'pointer-events-none');
-        addonMinRule.textContent = 'Available on 4, 8, or 10 bundles';
-      }
-
-      const totalSessions = pkg.sessions + addonSessions;
-      const travelRate = selectedLocation === 'losalamos' ? 10 : (selectedLocation === 'whiterock' ? 20 : 0);
-      const totalTravelCost = totalSessions * travelRate;
-      const grandTotal = pkg.basePrice + addonCost + totalTravelCost;
-      const effectivePerSession = grandTotal / totalSessions;
-
-      // Savings compared to $80 single sessions
-      const regularEquivalent = (totalSessions * 80) + totalTravelCost;
-      const totalSavings = regularEquivalent - grandTotal;
-
-      // Update DOM
-      document.getElementById('summary-sessions-badge').textContent = `${totalSessions} Total Session${totalSessions > 1 ? 's' : ''}`;
-      document.getElementById('summary-base-cost').textContent = `$${pkg.basePrice.toFixed(2)}`;
-
-      const addonRow = document.getElementById('summary-addon-row');
-      if (addonSessions > 0) {
-        addonRow.classList.remove('hidden');
-        document.getElementById('summary-addon-cost').textContent = `+$${addonCost.toFixed(2)} (${addonSessions}x)`;
-      } else {
-        addonRow.classList.add('hidden');
-      }
-
-      document.getElementById('summary-travel-cost').textContent = totalTravelCost > 0 ? `+$${totalTravelCost.toFixed(2)} ($${travelRate}/visit)` : '$0.00 (Clinic)';
-      document.getElementById('summary-per-session').textContent = `$${effectivePerSession.toFixed(2)} / session`;
-      document.getElementById('summary-total').textContent = `$${grandTotal.toFixed(2)}`;
-
-      const savingsEl = document.getElementById('summary-savings');
-      if (totalSavings > 0) {
-        savingsEl.textContent = `You save $${totalSavings.toFixed(2)} compared to single sessions!`;
-        savingsEl.className = 'block text-xs font-bold text-tealBrand mt-1';
-      } else {
-        savingsEl.textContent = 'Switch to a 4, 8, or 10 bundle to save up to $20/session!';
-        savingsEl.className = 'block text-xs font-semibold text-navy/60 mt-1';
-      }
-    }
-
-    function prefillBookingFromEstimator() {
-      const pkgKey = document.getElementById('calc-package').value;
-      const pkg = packageCatalog[pkgKey];
-      const formPkg = document.getElementById('form-package');
-      const formLoc = document.getElementById('form-location');
-      const formNotes = document.getElementById('form-notes');
-
-      formPkg.value = pkg.name;
-      if (selectedLocation === 'losalamos') {
-        formLoc.value = 'Los Alamos Home Visit (+$10/visit)';
-      } else if (selectedLocation === 'whiterock') {
-        formLoc.value = 'White Rock Home Visit (+$20/visit)';
-      } else {
-        formLoc.value = 'Clinic Visit (4220B Trinity Dr)';
-      }
-
-      const addonToggle = document.getElementById('calc-addon-toggle');
-      if (addonToggle.checked) {
-        const addonCount = document.getElementById('calc-addon-count').value;
-        formNotes.value = `I'm interested in the ${pkg.name} plus the Family Member Add-On Plan (${addonCount} additional sessions).`;
-      }
-
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-      showToast('Package details copied to the booking form below!');
-    }
-
-    // Referral Share Message Helper
+    // Referral Message
     function shareReferralMessage() {
-      const message = "Hi! I wanted to recommend my Physical Therapist, Hanju Tsai at Healing & Thriving in Los Alamos (4220B Trinity Dr • 505-920-9421 • tsai.hanju@gmail.com). Mention my referral when you book and we both get $10 OFF our next payment!";
-      copyText(message, 'Referral message copied! Paste it in a text or email to your friend.');
+      const msg = "Hi! I wanted to recommend my Physical Therapist, Hanju Tsai at Healing & Thriving in Los Alamos (4220B Trinity Dr • 505-920-9421 • healingthriving.pt@gmail.com). Let Hanju know I referred you when scheduling!";
+      copyText(msg, 'Referral message copied! Ready to text or email.');
     }
 
-    // Download VCard (.vcf) for Hanju Tsai
+    // Download VCF
     function downloadVCard() {
       const vcard = [
         'BEGIN:VCARD',
@@ -1828,7 +1429,7 @@
         'ORG:Healing & Thriving Physical Therapy',
         'TITLE:Physical Therapist',
         'TEL;TYPE=CELL,VOICE:505-920-9421',
-        'EMAIL;TYPE=INTERNET:tsai.hanju@gmail.com',
+        'EMAIL;TYPE=INTERNET:healingthriving.pt@gmail.com',
         'ADR;TYPE=WORK:;;4220B Trinity Dr;Los Alamos;NM;87544;USA',
         'NOTE:Quality Care • Personalized Support • Better Outcomes. Full 60-minute PT sessions in Los Alamos & White Rock.',
         'END:VCARD'
@@ -1843,14 +1444,14 @@
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      showToast('Contact card (.vcf) downloaded!');
+      showToast('Contact card (.vcf) saved!');
     }
 
-    // Inquiry Form Submission (Static Mailto & SMS)
+    // Form builder
     function buildInquiryBody() {
       const name = document.getElementById('form-name').value.trim() || 'Prospective Patient';
       const phone = document.getElementById('form-phone').value.trim() || 'Not provided';
-      const pkg = document.getElementById('form-package').value;
+      const careType = document.getElementById('form-care-type').value;
       const loc = document.getElementById('form-location').value;
       const referral = document.getElementById('form-referral').value.trim();
       const notes = document.getElementById('form-notes').value.trim();
@@ -1858,18 +1459,18 @@
       let lines = [
         `Hello Hanju,`,
         ``,
-        `I would like to inquire about Physical Therapy sessions at Healing & Thriving.`,
+        `I would like to inquire about Physical Therapy care with Healing & Thriving.`,
         ``,
         `• Name: ${name}`,
         `• Phone: ${phone}`,
-        `• Interested Package: ${pkg}`,
-        `• Preferred Location: ${loc}`
+        `• Area of Interest: ${careType}`,
+        `• Preferred Setting: ${loc}`
       ];
       if (referral) {
-        lines.push(`• Referred By ($10 Off Program): ${referral}`);
+        lines.push(`• Referred By: ${referral}`);
       }
       if (notes) {
-        lines.push(``, `Additional Notes / Availability:`, notes);
+        lines.push(``, `Goals / Symptoms / Schedule Notes:`, notes);
       }
       lines.push(``, `Thank you!`);
       return { name, subject: `PT Inquiry from ${name} - Healing & Thriving`, body: lines.join('\n') };
@@ -1878,22 +1479,15 @@
     function handleInquirySubmit(e) {
       e.preventDefault();
       const { subject, body } = buildInquiryBody();
-      const mailtoUrl = `mailto:tsai.hanju@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoUrl;
-      showToast('Opening your email client addressed to tsai.hanju@gmail.com...');
+      window.location.href = `mailto:healingthriving.pt@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      showToast('Opening your email client addressed to Hanju Tsai...');
     }
 
     function sendViaSMS() {
       const { body } = buildInquiryBody();
-      const smsUrl = `sms:5059209421?body=${encodeURIComponent(body)}`;
-      window.location.href = smsUrl;
-      showToast('Opening your text messaging app to 505-920-9421...');
+      window.location.href = `sms:5059209421?body=${encodeURIComponent(body)}`;
+      showToast('Opening text messaging to 505-920-9421...');
     }
-
-    // Initialize calculator on load
-    window.addEventListener('DOMContentLoaded', () => {
-      updateEstimator();
-    });
   </script>
 </body>
 </html>
