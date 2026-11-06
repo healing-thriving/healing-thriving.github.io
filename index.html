@@ -6,6 +6,10 @@
   <title>Healing & Thriving | Physical Therapy by Hanju Tsai in Los Alamos, NM</title>
   <meta name="description" content="Healing & Thriving Physical Therapy in Los Alamos & White Rock, NM. Quality Care, Personalized Support, Better Outcomes with Physical Therapist Hanju Tsai. Full 60-minute sessions." />
 
+  <!-- Favicon Configuration with multi-filename fallback for GitHub Pages -->
+  <link id="site-favicon" rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -151,13 +155,14 @@
   <!-- ================= STICKY HEADER / NAVBAR ================= -->
   <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-navy/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo (HT Monogram + Title) -->
+      <!-- Brand Logo (Figurine with Bluebirds + Title) -->
       <a href="#top" class="flex items-center gap-3.5 group focus:outline-none">
-        <!-- Framed HT Square from Business Card -->
-        <div class="w-11 h-11 bg-skyCard p-1 border-2 border-navy shadow-sm rounded-sm flex items-center justify-center transition-transform group-hover:scale-105">
-          <div class="w-full h-full bg-[#15181C] flex items-center justify-center">
-            <span class="text-white font-sans font-semibold text-base tracking-wider">HT</span>
-          </div>
+        <!-- Figurine Logo Emblem Container -->
+        <div class="w-12 h-12 rounded-full bg-skyCard/70 border-2 border-navy/20 shadow-sm flex items-center justify-center overflow-hidden transition-transform group-hover:scale-105 shrink-0">
+          <img src="logo.png" 
+               alt="Healing & Thriving Logo" 
+               class="w-full h-full object-contain p-0.5"
+               onerror="this.onerror=null; this.src='Screenshot 2026-10-12 183738 LOGO.png'; this.classList.remove('hidden');" />
         </div>
         <div>
           <span class="block font-serif text-2xl sm:text-3xl font-bold text-navy tracking-tight leading-none">
@@ -286,17 +291,18 @@
             <div class="bg-white p-3 sm:p-4 rounded-2xl shadow-soft border border-navy/10">
               <div class="biz-card-texture rounded-xl p-6 sm:p-7 relative overflow-hidden border border-white/50">
                 <div class="grid grid-cols-12 items-center gap-4">
-                  <!-- Monogram Box -->
+                  <!-- Figurine Logo Emblem Showcase -->
                   <div class="col-span-4 flex justify-center">
-                    <div class="w-20 h-20 sm:w-24 sm:h-24 p-1.5 border-2 border-[#1A1D21] bg-skyCard/60 flex items-center justify-center shadow-sm">
-                      <div class="w-full h-full bg-[#16181D] flex items-center justify-center">
-                        <span class="text-white font-sans font-medium text-3xl sm:text-4xl tracking-wider">HT</span>
-                      </div>
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white/70 border-2 border-navy/15 p-1.5 shadow-sm flex items-center justify-center overflow-hidden backdrop-blur-sm">
+                      <img src="logo.png" 
+                           alt="Healing & Thriving Figurine Emblem" 
+                           class="w-full h-full object-contain"
+                           onerror="this.onerror=null; this.src='Screenshot 2026-10-12 183738 LOGO.png';"/>
                     </div>
                   </div>
 
                   <!-- Clinic & Practitioner Identity -->
-                  <div class="col-span-8 pr-8 space-y-1.5 text-[#1A1D21]">
+                  <div class="col-span-8 space-y-1.5 text-[#1A1D21]">
                     <div>
                       <h2 class="font-serif italic font-bold text-2xl sm:text-3xl tracking-wide text-[#181C22]">
                         Hanju Tsai
@@ -313,22 +319,6 @@
                       Serving Los Alamos &amp; White Rock
                     </p>
                   </div>
-                </div>
-
-                <!-- Right Emblem Illustration: Woman with 3 bluebirds -->
-                <div class="absolute right-2 bottom-2 w-20 sm:w-24 pointer-events-none">
-                  <svg viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 38 C12 30, 6 32, 4 36 C10 38, 12 42, 6 45 C14 45, 20 43, 24 40 Z" fill="#3B6E8C"/>
-                    <path d="M30 47 C25 41, 20 42, 18 45 C22 47, 24 50, 20 52 C26 52, 31 50, 34 48 Z" fill="#4B7F9F"/>
-                    <path d="M102 52 C108 45, 114 46, 116 50 C110 52, 108 55, 113 58 C105 58, 99 56, 95 53 Z" fill="#3B6E8C"/>
-                    <path d="M46 55 Q32 48 20 42" stroke="#D7B399" stroke-width="3.5" stroke-linecap="round"/>
-                    <path d="M68 56 Q84 56 98 54" stroke="#D7B399" stroke-width="3.5" stroke-linecap="round"/>
-                    <path d="M56 30 C64 30, 72 42, 74 56 C76 66, 70 72, 65 68 C62 60, 52 46, 56 30Z" fill="#3A2720"/>
-                    <ellipse cx="57" cy="37" rx="6" ry="7.5" fill="#E5C3A6"/>
-                    <path d="M45 50 L68 51 L65 78 C72 96, 82 115, 76 130 C70 138, 55 142, 46 135 C42 115, 46 92, 48 76 Z" fill="#F7F6F2" stroke="#D5D2C8" stroke-width="1.5"/>
-                    <path d="M55 62 C54 85, 52 110, 50 133" stroke="#DFDDD4" stroke-width="1.5" stroke-linecap="round"/>
-                    <path d="M61 64 C63 88, 67 110, 71 128" stroke="#DFDDD4" stroke-width="1.5" stroke-linecap="round"/>
-                  </svg>
                 </div>
               </div>
 
@@ -1524,16 +1514,17 @@
   <footer class="bg-navy text-cream py-10 border-t border-white/10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-white/10">
-        <!-- Brand Identity -->
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 bg-skyCard p-1 border border-white rounded-sm flex items-center justify-center">
-            <div class="w-full h-full bg-[#15181C] flex items-center justify-center">
-              <span class="text-white font-sans font-bold text-sm tracking-wider">HT</span>
-            </div>
+        <!-- Brand Identity with Figurine Logo -->
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-full bg-white/90 p-1 border border-white/40 flex items-center justify-center overflow-hidden shadow-sm shrink-0">
+            <img src="logo.png" 
+                 alt="Healing & Thriving Logo" 
+                 class="w-full h-full object-contain"
+                 onerror="this.onerror=null; this.src='Screenshot 2026-10-12 183738 LOGO.png';" />
           </div>
           <div>
-            <p class="font-serif text-xl font-bold text-white">Healing &amp; Thriving</p>
-            <p class="text-xs text-skyCard">Hanju Tsai • Physical Therapy</p>
+            <p class="font-serif text-xl font-bold text-white leading-tight">Healing &amp; Thriving</p>
+            <p class="text-xs text-skyCard font-medium">Hanju Tsai • Physical Therapy</p>
           </div>
         </div>
 
@@ -1560,6 +1551,23 @@
 
   <!-- ================= APPLICATION JAVASCRIPT ================= -->
   <script>
+    // Ensure favicon loads properly regardless of which filename was pushed to GitHub Pages
+    (function initFavicon() {
+      const favicon = document.getElementById('site-favicon');
+      const testImg = new Image();
+      testImg.src = 'favicon.png';
+      testImg.onerror = function() {
+        const fallbackImg = new Image();
+        fallbackImg.src = 'logo.png';
+        fallbackImg.onload = function() {
+          favicon.href = 'logo.png';
+        };
+        fallbackImg.onerror = function() {
+          favicon.href = 'Screenshot 2026-10-12 183738 LOGO.png';
+        };
+      };
+    })();
+
     // Set current year in footer
     document.getElementById('year-span').textContent = new Date().getFullYear();
 
