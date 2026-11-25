@@ -5,3 +5,6 @@
 .service-more{margin:24px 0}.service-more summary{cursor:pointer;display:inline-block;border-bottom:1px solid #9caea0;padding:0 0 7px;color:var(--ink);font-size:13px;font-weight:700}.service-more summary::after{content:" +";margin-left:12px}.service-more[open] summary::after{content:" −"}.service-more summary:hover{color:#a56642}.service-more summary:focus-visible{outline:3px solid #c7804e;outline-offset:4px}.service-more[open] summary{margin-bottom:24px}
 
 .nav-dropdown{position:relative}.nav-dropdown summary{cursor:pointer;list-style:none}.nav-dropdown summary::-webkit-details-marker{display:none}.nav-dropdown summary::after{content:' ▾'}.nav-dropdown summary:focus-visible{outline:3px solid #c7804e;outline-offset:4px}.nav-menu{position:absolute;z-index:10;top:100%;left:-16px;min-width:190px;background:#fbfbf6;border:1px solid var(--line);box-shadow:0 8px 20px #203f3b18;padding:8px 0}.nav-menu a{display:block;padding:8px 16px}.nav-menu a:hover{background:#e8eee5}
+
+.article-layout article{min-width:0}
+.approach-image{display:block;width:100%;max-width:100%;height:auto;border-radius:8px;margin:0 0 35px}
